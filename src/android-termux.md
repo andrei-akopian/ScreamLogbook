@@ -17,7 +17,8 @@ In Termux
 0. Install [OpenSSH](https://www.openssh.com/) `pkg install openssh`
 
 1. Host with `sshd` (opens on port 8022)
-    1. Warning, you are exposing your phone to the world here.
+    1. This exposes your device only on the local (WiFi) network.
+    2. Check your ip address in `ifconfig`. `127.0.0.1` is `localhost`, instead you want the `192.168.[...].[...]` local address.
 
 2. `whoami` should give current user (something like `u0_a123`)
 
@@ -33,7 +34,7 @@ Only real usecase of using a phone for selfhosting, is when you don't have your 
 
 Figure out IP you will be hosting stuff from:
 - Localhost: `127.0.0.1` or `localhost`.
-- Local (home network): `ifconfig`
+- Local (home network): `ifconfig` (`192.168.[...].[...]`)
 - Public:
 
 [Awesome Selfhosted](https://github.com/awesome-selfhosted/awesome-selfhosted)
