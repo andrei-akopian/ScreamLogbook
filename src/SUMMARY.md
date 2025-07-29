@@ -18,7 +18,7 @@
     - [OPTical ARchiver](./getting-stuff-to-run/optar.md)
     - [Random Libraries](./getting-stuff-to-run/random_libraries/random_libraries.md)
       - [tre (Regex)](./getting-stuff-to-run/random_libraries/tre.md)
-      - [libpng](.getting-stuff-to-run/random_libraries/libpng.md)
+      - [libpng](./getting-stuff-to-run/random_libraries/libpng.md)
 - [Python GUI Libraries](./python_gui_libraries/python_gui_libraries.md)
     - [DearPyGui](./python_gui_libraries/DearPyGui.md)
 - [Working with File System in Python](./working_with_file_system_in_python.md)
