@@ -7,6 +7,10 @@
 - [Flask (Python)](./flask.md)
 - [Stories](./tales.md)
 - [Gmail with Python](./gmail-python.md)
+- [Printing in Python](./printing_in_python.md)
+- [Python CLI Libraries](./python-cli.md)
+- Git
+  - [Git Profiles](./git/git-profiles.md)
 - [Dealing with Secrets](./dealing_with_secrets.md)
 - [Android and Termux](./android-termux.md)
 - [Getting Stuff to Run](./compiling_c_projects.md)
@@ -16,6 +20,7 @@
     - [elinks](./getting-stuff-to-run/elinks.md)
     - [Browsh](./getting-stuff-to-run/browsh.md)
     - [OPTical ARchiver](./getting-stuff-to-run/optar.md)
+    - [Dragon (drag-and-drop tool)](./getting-stuff-to-run/dragon.md)
     - [Random Libraries](./getting-stuff-to-run/random_libraries/random_libraries.md)
       - [tre (Regex)](./getting-stuff-to-run/random_libraries/tre.md)
       - [libpng](./getting-stuff-to-run/random_libraries/libpng.md)
