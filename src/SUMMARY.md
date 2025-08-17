@@ -9,8 +9,7 @@
 - [Gmail with Python](./gmail-python.md)
 - [Printing in Python](./printing_in_python.md)
 - [Python CLI Libraries](./python-cli.md)
-- Git
-  - [Git Profiles](./git/git-profiles.md)
+- [Git Profiles](./git/git-profiles.md)
 - [Dealing with Secrets](./dealing_with_secrets.md)
 - [Android and Termux](./android-termux.md)
 - [Getting Stuff to Run](./compiling_c_projects.md)
@@ -28,3 +27,4 @@
     - [DearPyGui](./python_gui_libraries/DearPyGui.md)
 - [Working with File System in Python](./working_with_file_system_in_python.md)
 - [HTML Boilerplate](./html_boilerplate.md)
+- [Shebang](./html_boilerplate.md)
