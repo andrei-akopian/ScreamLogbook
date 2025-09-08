@@ -19,3 +19,26 @@ Sources:
     </body>
 </html>
 ```
+
+[Fullscreen](https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API)
+```js
+// On pressing ENTER call toggleFullScreen method
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    toggleFullScreen(element);
+  }
+});
+function toggleFullScreen(element) {
+  if (!document.fullscreenElement) {
+    // If the document is not in full screen mode
+    // make the video full screen
+    element.requestFullscreen();
+  } else {
+    // Otherwise exit the full screen
+    document.exitFullscreen?.();
+  }
+}
+```
+
+## Related
+- [Canvas API](./javascript/canvas.md)

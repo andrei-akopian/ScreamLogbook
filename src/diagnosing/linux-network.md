@@ -7,6 +7,10 @@
 
 `lspci`
 
+`lspci -nnk | grep -iA3 net` (shows wifi chipset)
+
+`lsusb`
+
 `ifconfig`
 
 `ethtool` is deprecated (gives error), use `nmcli`
