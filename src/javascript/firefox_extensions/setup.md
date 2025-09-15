@@ -92,6 +92,7 @@ browser.runtime.onMessage.addListener((message) => {
 
 <details>
 <summary>Query Code</summary>
+
 ```js
 // popup.js
 async function askContent() {
