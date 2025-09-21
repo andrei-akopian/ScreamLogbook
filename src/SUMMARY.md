@@ -30,7 +30,7 @@
 - [Python GUI Libraries](./python_gui_libraries/python_gui_libraries.md)
     - [DearPyGui](./python_gui_libraries/DearPyGui.md)
 - [Markdown](./markdown/markdown.md)
-    - [Markdown to HTML](./markdown/to-html.md)
+    - [Markdown to HTML](./markdown/to_html.md)
 - [LaTeX](./latex/latex.md)
 - [Working with File System in Python](./working_with_file_system_in_python.md)
 - [HTML Boilerplate](./html_boilerplate.md)

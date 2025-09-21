@@ -12,8 +12,14 @@ Symbol lookup:
 ### Front Matters
 
 ```tex
+% metadata
 \documentclass{article}
+\title{Test}
+\author{Me}
+\date{\today}
+% displayed
 \begin{document}
+\maketitle
 \end{document}
 ```
 
