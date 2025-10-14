@@ -19,7 +19,7 @@ Relevant Docs:
   - see defualt template `pandoc -D html`
   - `--template=file.html`
 - [break-after: page](https://developer.mozilla.org/en-US/docs/Web/CSS/break-after)
-  - [MDN docs for <hr> tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr)
+  - [MDN docs for `<hr>` tag](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr)
   - Markdown `---` line is converted into `<hr>`
   - `hr {break-after: page}` allows to split pages of the pdf
 - [MathJax](https://www.mathjax.org/) converter `<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>`
