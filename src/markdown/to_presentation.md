@@ -34,7 +34,7 @@ slide 2
 ```
 
 List of presentation tips:
-- easy (and fast) to setup and reset
+- make it easy to setup and reset
 - avoid overusing words
 - people can look either you or the slides at a time
 - big font
