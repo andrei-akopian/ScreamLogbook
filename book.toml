@@ -1,0 +1,9 @@
+[book]
+authors = ["andrei-akopian"]
+language = "en"
+src = "src"
+title = "Scream Logbook"
+
+[output.html]
+git-repository-url = "https://github.com/andrei-akopian/ScreamLogbook"
+site-url = "/ScreamLogbook/"
