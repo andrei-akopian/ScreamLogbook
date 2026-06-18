@@ -1,0 +1,2296 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Scream Logbook</title>
+        <meta name="robots" content="noindex">
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon-de23e50b.svg">
+        <link rel="shortcut icon" href="favicon-8114d1fc.png">
+        <link rel="stylesheet" href="css/variables-8adf115d.css">
+        <link rel="stylesheet" href="css/general-0392ca55.css">
+        <link rel="stylesheet" href="css/chrome-fc474251.css">
+        <link rel="stylesheet" href="css/print-9e4910d8.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="fonts/fonts-9644e21d.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="mdbook-highlight-css" href="highlight-493f70e1.css">
+        <link rel="stylesheet" id="mdbook-tomorrow-night-css" href="tomorrow-night-4c0ae647.css">
+        <link rel="stylesheet" id="mdbook-ayu-highlight-css" href="ayu-highlight-3fdfc3ac.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+            window.path_to_searchindex_js = "searchindex-de6e41b3.js";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="toc-8eda375a.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="mdbook-body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="mdbook-sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("mdbook-sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+                sidebar_toggle.checked = false;
+            }
+            if (sidebar === 'visible') {
+                sidebar_toggle.checked = true;
+            } else {
+                html.classList.remove('sidebar-visible');
+            }
+        </script>
+
+        <nav id="mdbook-sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="toc.html"></iframe>
+            </noscript>
+            <div id="mdbook-sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="mdbook-page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="mdbook-menu-bar-hover-placeholder"></div>
+                <div id="mdbook-menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="mdbook-sidebar-toggle" class="icon-button" for="mdbook-sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="mdbook-sidebar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg></span>
+                        </label>
+                        <button id="mdbook-theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="mdbook-theme-list">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M371.3 367.1c27.3-3.9 51.9-19.4 67.2-42.9L600.2 74.1c12.6-19.5 9.4-45.3-7.6-61.2S549.7-4.4 531.1 9.6L294.4 187.2c-24 18-38.2 46.1-38.4 76.1L371.3 367.1zm-19.6 25.4l-116-104.4C175.9 290.3 128 339.6 128 400c0 3.9 .2 7.8 .6 11.6c1.8 17.5-10.2 36.4-27.8 36.4H96c-17.7 0-32 14.3-32 32s14.3 32 32 32H240c61.9 0 112-50.1 112-112c0-2.5-.1-5-.2-7.5z"/></svg></span>
+                        </button>
+                        <ul id="mdbook-theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="mdbook-theme-ayu">Ayu</button></li>
+                        </ul>
+                        <button id="mdbook-search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="mdbook-searchbar">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352c79.5 0 144-64.5 144-144s-64.5-144-144-144S64 128.5 64 208s64.5 144 144 144z"/></svg></span>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Scream Logbook</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <span class=fa-svg id="print-button"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M128 0C92.7 0 64 28.7 64 64v96h64V64H354.7L384 93.3V160h64V93.3c0-17-6.7-33.3-18.7-45.3L400 18.7C388 6.7 371.7 0 354.7 0H128zM384 352v32 64H128V384 368 352H384zm64 32h32c17.7 0 32-14.3 32-32V256c0-35.3-28.7-64-64-64H64c-35.3 0-64 28.7-64 64v96c0 17.7 14.3 32 32 32H64v64c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V384zm-16-88c-13.3 0-24-10.7-24-24s10.7-24 24-24s24 10.7 24 24s-10.7 24-24 24z"/></svg></span>
+                        </a>
+                        <a href="https://github.com/andrei-akopian/ScreamLogbook" title="Git repository" aria-label="Git repository">
+                            <span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg></span>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="mdbook-search-wrapper" class="hidden">
+                    <form id="mdbook-searchbar-outer" class="searchbar-outer">
+                        <div class="search-wrapper">
+                            <input type="search" id="mdbook-searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="mdbook-searchresults-outer" aria-describedby="searchresults-header">
+                            <div class="spinner-wrapper">
+                                <span class=fa-svg id="fa-spin"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M304 48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zm0 416c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM48 304c26.5 0 48-21.5 48-48s-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48zm464-48c0-26.5-21.5-48-48-48s-48 21.5-48 48s21.5 48 48 48s48-21.5 48-48zM142.9 437c18.7-18.7 18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zm0-294.2c18.7-18.7 18.7-49.1 0-67.9S93.7 56.2 75 75s-18.7 49.1 0 67.9s49.1 18.7 67.9 0zM369.1 437c18.7 18.7 49.1 18.7 67.9 0s18.7-49.1 0-67.9s-49.1-18.7-67.9 0s-18.7 49.1 0 67.9z"/></svg></span>
+                            </div>
+                        </div>
+                    </form>
+                    <div id="mdbook-searchresults-outer" class="searchresults-outer hidden">
+                        <div id="mdbook-searchresults-header" class="searchresults-header"></div>
+                        <ul id="mdbook-searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('mdbook-sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('mdbook-sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#mdbook-sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="mdbook-content" class="content">
+                    <main>
+                        <h1 id="welcome-to-scream-logbook"><a class="header" href="#welcome-to-scream-logbook">Welcome to Scream Logbook</a></h1>
+<p>These are my notes from trying to make stuff work, sparse and mostly for myself.</p>
+<p>I use MacOS with Apple Selicone, so notes are centered around that. <a href="https://github.com/mikeroyal/Apple-Silicon-Guide">btw. here is useful link on Silicon Macs</a>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="sentiment-analysis"><a class="header" href="#sentiment-analysis">Sentiment Analysis</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/Sentiment_analysis">Wikipedia</a></p>
+<p>Python libraries:</p>
+<ul>
+<li><a href="https://textblob.readthedocs.io/en/dev/">Textblob</a></li>
+<li><a href="https://www.nltk.org/">Natural Language Toolkit (NLTK)</a></li>
+<li>Don’t use <a href="https://github.com/clips/pattern/wiki">pattern</a> (no longer maintained)</li>
+</ul>
+<pre><code class="language-py">from textblob import TextBlob
+
+blob = TextBlob(text)
+
+for sentence in blob.sentences:
+    print(sentence.sentiment) # sentiment.polarity sentiment.subjectivity
+</code></pre>
+<dl>
+<dt id="polarity"><a class="header" href="#polarity">Polarity</a></dt>
+<dd>connotation +positive vs -negative (+happy vs -sad)</dd>
+<dt id="subjectivity"><a class="header" href="#subjectivity">Subjectivity</a></dt>
+<dd>+objective vs -subjective (+fact vs -opinion)</dd>
+</dl>
+<h2 id="more-materials"><a class="header" href="#more-materials">More materials</a></h2>
+<ul>
+<li>
+<p><a href="https://nealcaren.org/lessons/wordlists/">Word Lists and Sentiment Analysis by Neal Caren</a> with <a href="https://www2.imm.dtu.dk/pubdb/pubs/6010-full.html">AFINN</a> (<a href="https://github.com/fnielsen/afinn">python library</a>)</p>
+</li>
+<li>
+<p><a href="https://www.kaggle.com/datasets/prajwalkanade/sentiment-analysis-word-lists-dataset">Sentiment Analysis Word Lists Dataset by Prajwal Kanade on Kaggle</a></p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="web-requests-and-scrapping"><a class="header" href="#web-requests-and-scrapping">Web Requests and Scrapping</a></h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status">HTTP Status Codes</a></p>
+<ul>
+<li><code>200</code> is success</li>
+<li><code>404</code> is not found</li>
+<li><code>1XX</code> is information</li>
+<li><code>2XX</code> is success</li>
+<li><code>3XX</code> is redirect and other annoynaces</li>
+<li><code>4XX</code> and <code>5XX</code> are failures</li>
+</ul>
+<h1 id="curl"><a class="header" href="#curl">Curl</a></h1>
+<p><a href="https://curl.se/">Curl.se</a></p>
+<p><code>curl https://example.com</code></p>
+<h1 id="python"><a class="header" href="#python">Python</a></h1>
+<pre><code class="language-py">import requests
+r = requests.get('https://example.com/')
+print(r.text) # HTML as string
+print(r.status_code) # &lt;int&gt;
+</code></pre>
+<h2 id="beautiful-soup"><a class="header" href="#beautiful-soup">Beautiful Soup</a></h2>
+<p><a href="https://beautiful-soup-4.readthedocs.io/en/latest/">Docs for Beautiful Soup 4</a></p>
+<pre><code class="language-py">from bs4 import BeautifulSoup
+soup = BeautifulSoup(html_doc, 'html.parser')
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="php"><a class="header" href="#php">PHP</a></h1>
+<p>How to get a baisic php website running.</p>
+<ul>
+<li><a href="https://www.php.net/">PHP.net</a> and <a href="https://www.php.net/downloads.php">installation</a></li>
+<li><a href="https://en.wikipedia.org/wiki/PHP">Wikipedia</a></li>
+<li><a href="https://pldb.io/concepts/php.html">PLDB</a></li>
+</ul>
+<p>PHP is a <strong>Template</strong> language. It sort of has it’s own html tag. <code>&lt;?php [code] ?&gt;</code></p>
+<p><code>index.php</code></p>
+<pre><code class="language-php">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Current Time:&lt;/h1&gt;
+    &lt;?php
+        $current_time = date("h:i:sa");
+        echo "&lt;p&gt;Current time is $current_time&lt;/p&gt;";
+    ?&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>If you run <code>php index.php &gt; output.html &amp; open output.html</code> you will get an html with the current time substituted.</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Current Time:&lt;/h1&gt;
+    &lt;p&gt;Current time is 04:28:45pm&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>In fact, it doesn’t even need to be HTML.</p>
+<pre><code class="language-php">Hello World at &lt;?php
+    $current_time = date("h:i:sa");
+    echo "$current_time";
+?&gt;.
+
+</code></pre>
+<p>Compiles into <code>Hello World at 04:38:02pm.</code> just fine.</p>
+<p>PHP just replaces it’s own code with the code’s output.</p>
+<h2 id="server"><a class="header" href="#server">Server</a></h2>
+<p>A server that automatically compiles all requested php files is a builtin command.</p>
+<p><code>php -S localhost:8000</code></p>
+<h2 id="sqlite"><a class="header" href="#sqlite">SQLite</a></h2>
+<p><a href="https://stackoverflow.com/questions/5041737/how-to-connect-to-a-sqlite3-db-with-php">SQLite comes out of the box</a></p>
+<pre><code class="language-php">&lt;?php
+$db = new SQLite3('sqlite3db.db');
+
+$results = $db-&gt;query('select * from db');
+while ($row = $results-&gt;fetchArray()) {
+var_dump($row);
+}
+?&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="programming-tales"><a class="header" href="#programming-tales">Programming Tales</a></h1>
+<ul>
+<li>
+<p><a href="https://github.com/kdeldycke/awesome-falsehood">Falsehoods Programmers Believe In</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=-5wpm-gesOY">The Problem with Time &amp; Timezones | Computerphile (video)</a></p>
+</li>
+<li>
+<p><a href="https://github.com/danluu/debugging-stories">Dan Luu’s collection of debugging stories</a></p>
+</li>
+<li>
+<p><a href="https://www.reddit.com/r/TalesFromDebugging/">r/TalesFromDebugging</a></p>
+</li>
+<li>
+<p><a href="https://www.teamten.com/lawrence/writings/coding-machines/">Coding Machines</a></p>
+</li>
+</ul>
+<h2 id="children-stories"><a class="header" href="#children-stories">Children Stories</a></h2>
+<ul>
+<li>
+<p><a href="https://pages.cs.wisc.edu/~mkowalcz/628.pdf">Zero-Knowledge Protocols for Children</a></p>
+</li>
+<li>
+<p><a href="https://nickbostrom.com/papers/the-fable-of-the-dragon-tyrant/">The Fable of the Dragon Tyrant</a></p>
+</li>
+</ul>
+<h2 id="talks-and-lectures"><a class="header" href="#talks-and-lectures">Talks and Lectures</a></h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=-czq9nJQops">How Debuggers Work by Sy Brand at GOTO 2025</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="list-of-algorithms"><a class="header" href="#list-of-algorithms">List of Algorithms</a></h1>
+<p>List of Algorithms whose names I sometimes forget.</p>
+<ul>
+<li>CORDIC method (aka higher/lower game)
+<ul>
+<li><a href="https://www.eit.lth.se/fileadmin/eit/courses/eitf35/2017/CORDIC_For_Dummies.pdf">CORDIC for Dummies</a></li>
+<li>tricks
+<ul>
+<li>use lookup table or easy to compute steps</li>
+<li>use convienient rathern than optimal step magnitudes</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Power Iteration</li>
+<li>Arithmetic coding</li>
+<li>Reservoir sampling</li>
+<li>Voronoi diagram
+<ul>
+<li>Fortune’s algorithm</li>
+</ul>
+</li>
+<li>Diffie-Hellman (DH) Key Exchange</li>
+<li><a href="https://en.wikipedia.org/wiki/Shunting_yard_algorithm">Shunting Yard Algorithm for parsing expressions</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="python-cli-libraries-and-notes"><a class="header" href="#python-cli-libraries-and-notes">Python CLI Libraries and Notes</a></h1>
+<ul>
+<li><a href="https://docs.python.org/3/library/argparse.html">Argparse</a> builtin</li>
+<li><a href="https://click.palletsprojects.com/en/stable/">Click</a> the classic python cli library</li>
+<li><a href="https://typer.tiangolo.com/">Typer</a> minimalist and easy to add</li>
+<li><a href="https://plumbum.readthedocs.io/en/latest/">Plumbum</a> does some crazy unix stuff</li>
+</ul>
+<p>Also <a href="printing_in_python.html">Python Printing Libraries</a> like [Rich]((./printing_in_python.md#rich) will be really relevant.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git"><a href="#git" class="header">Git</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git-worktree"><a class="header" href="#git-worktree">Git Worktree</a></h1>
+<p><code>git worktree add &lt;path&gt; [&lt;branch&gt;]</code></p>
+<p>warning, worktrees are not added to gitignore automatically, make sure to add them. <code>echo ".worktree" &gt;&gt; .gitignore</code></p>
+<pre><code>.git
+.gitignore
+.worktrees
+L tree1
+</code></pre>
+<p>so usually</p>
+<pre><code class="language-sh">mkdir .worktree
+echo ".worktree" &gt;&gt; .gitignore
+git worktree add .worktree/tree2 main
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="multiple-git-identities--profiles"><a class="header" href="#multiple-git-identities--profiles">Multiple Git Identities / Profiles</a></h1>
+<p><a href="https://gist.github.com/Icaruk/f024a18093dc28ec1588cfb90efc32f7">Multiple Git Profiles Guide by Icaruk</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git-hooks"><a href="#git-hooks" class="header">Git Hooks</a></h1>
+<p>in <code>.git/hooks</code> are a bunch of <code>.sample</code> files (bash). If the <code>.sample</code> ending is removed the hook becomes active. (Literally just bash files.)</p>
+<p>Add linter to <code>.git/hooks/pre-commit</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="git-ignore"><a class="header" href="#git-ignore">Git Ignore</a></h1>
+<p>For local (non-cloud sync stuff) put it into <code>.git/info/exclude</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="readme-style-guide"><a class="header" href="#readme-style-guide">README Style Guide</a></h1>
+<h2 id="template"><a class="header" href="#template"><a href="#project-title">Template</a></a></h2>
+<ul>
+<li><a href="https://github.com/andrei-akopian/ScreamLogbook">link to repo somewhere at the top</a>. Finding the source / remote origin is hard in cloned repositories.</li>
+<li>links to related projects, preferably even before your own demo.</li>
+</ul>
+<p>Related:</p>
+<ul>
+<li><a href="https://github.com/hackergrrl/art-of-readme">Art of README</a></li>
+<li><a href="https://tldp.org/HOWTO/Software-Release-Practice-HOWTO/distpractice.html#readme">Software Relsease Pracieces</a> by The Linux Documentation Project</li>
+<li><a href="https://www.gnu.org/prep/standards/html_node/Releases.html">GNU Releases</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="project-title"><a class="header" href="#project-title">Project Title</a></h1>
+<p><a href="https://github.com/andrei-akopian/ScreamLogbook/blob/main/src/git/readme-template.md?plain=1">Github Repo</a> | <a href="https://andrei-akopian.github.io/ScreamLogbook/git/readme-template.html">Website</a> | Docs | License</p>
+<p>Also check <a href="https://shields.io/">Shields.io</a> and <a href="https://github.com/joelparkerhenderson/github-special-files-and-paths">Github Special Files and Paths</a></p>
+<p>Brief description.</p>
+<p>Tooling: Python, etc. etc.</p>
+<p>Similar projects: <a href="https://github.com/matiassingers/awesome-readme">Awesome Readme</a></p>
+<h2 id="demo"><a class="header" href="#demo"><a href="https://andrei-akopian.github.io/ScreamLogbook/git/readme-template.html">Demo</a></a></h2>
+<p><img src="#project-title" alt="Screenshot"></p>
+<p><a href="https://www.youtube.com/watch?v=E4WlUXrJgy4">Video</a></p>
+<h2 id="table-of-contents"><a class="header" href="#table-of-contents">Table of Contents</a></h2>
+<hr>
+<h2 id="installation-instructions"><a class="header" href="#installation-instructions">Installation Instructions</a></h2>
+<h2 id="project-structure"><a class="header" href="#project-structure">Project Structure</a></h2>
+<h2 id="about"><a class="header" href="#about">About</a></h2>
+<h3 id="license"><a class="header" href="#license">License</a></h3>
+<h3 id="contact"><a class="header" href="#contact">Contact</a></h3>
+<h3 id="acknowledgments"><a class="header" href="#acknowledgments">Acknowledgments</a></h3>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dealing-with-secrets"><a class="header" href="#dealing-with-secrets">Dealing with Secrets</a></h1>
+<p>Never ever hardcode snsitive information, especially when publishing it. Put whatever holds the secrets into <code>.gitignore</code>.</p>
+<p>TOC:</p>
+<ul>
+<li><a href="#dotenv">dotenv (Python)</a></li>
+</ul>
+<h2 id="dotenv"><a class="header" href="#dotenv">Dotenv</a></h2>
+<pre><code>L main.py
+L .env
+</code></pre>
+<pre><code class="language-bash">PASSWORD=password1234
+</code></pre>
+<pre><code class="language-py">import os # necessary
+from dotenv import load_dotenv
+
+load_dotenv('.env') # Loads into OS
+
+password = os.getenv('PASSWORD') # Gets from the OS
+</code></pre>
+<p>(<code>os.getenv("HOME")</code> is Bash environmental variables <code>$ env</code>)</p>
+<h2 id="yaml"><a class="header" href="#yaml">YAML</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="android-termux"><a class="header" href="#android-termux">Android Termux</a></h1>
+<p>Default package manager is <code>pkg</code></p>
+<p>But it doesn’t work for 99% of stuff, so expect to compile and git clone stuff yourself. Also, superuser is broken unless you have rooted your phone.</p>
+<h2 id="ssh-server"><a class="header" href="#ssh-server">SSH server</a></h2>
+<p>SSH = <a href="https://en.wikipedia.org/wiki/Secure_Shell">Secure Shell</a> (encrypted connection to another computers commandline)</p>
+<p><a href="https://wiki.termux.com/wiki/Remote_Access">Official docs on Remote Access</a>.</p>
+<p>Doing everything from the computer is 10x easier, so use ssh.</p>
+<p>In Termux</p>
+<ol start="0">
+<li>
+<p>Install <a href="https://www.openssh.com/">OpenSSH</a> <code>pkg install openssh</code></p>
+</li>
+<li>
+<p>Host with <code>sshd</code> (opens on port 8022)</p>
+<ol>
+<li>This exposes your device only on the local (WiFi) network.</li>
+<li>Check your ip address in <code>ifconfig</code>. <code>127.0.0.1</code> is <code>localhost</code>, instead you want the <code>192.168.[...].[...]</code> local address.</li>
+</ol>
+</li>
+<li>
+<p><code>whoami</code> should give current user (something like <code>u0_a123</code>)</p>
+</li>
+<li>
+<p>Setup password with <code>passwd</code> (Remember step 1.1, so don’t set defaults)</p>
+</li>
+<li>
+<p>Do whatever you wanted to do.</p>
+</li>
+</ol>
+<p>Last. <code>pkill sshd</code> to close</p>
+<h2 id="hosting-stuff"><a class="header" href="#hosting-stuff">Hosting stuff</a></h2>
+<p>Only real usecase of using a phone for selfhosting, is when you don’t have your laptop, but other people for some reason do, and you want your phone to do the heavy lifting.</p>
+<p>Figure out IP you will be hosting stuff from:</p>
+<ul>
+<li>Localhost: <code>127.0.0.1</code> or <code>localhost</code>.</li>
+<li>Local (home network): <code>ifconfig</code> (<code>192.168.[...].[...]</code>)</li>
+<li>Public:</li>
+</ul>
+<p><a href="https://github.com/awesome-selfhosted/awesome-selfhosted">Awesome Selfhosted</a></p>
+<p>What I managed to get running:</p>
+<details>
+    <summary><a href="https://www.atheos.io/">Atheos</a> Web IDE</summary>
+    
+<div style="margin-left: 3em">
+        
+<p><a href="https://github.com/Atheos/Atheos">Github</a></p>
+
+        
+<p>Normal install won't work because Termux doesn't like sudo.</p>
+
+        
+<p>Atheos is written in PHP. So </p>
+
+        
+<p>Hence <code>git clone https://github.com/Atheos/Atheos</code></p>
+
+        
+<p><code>cd Atheos</code></p>
+
+        
+<p><code>php -S [your local ip]:8000</code> (local network php server on port 8000)</p>
+
+        
+<p>Open [phone's local ip]:8000 in your computer browser and enjoy.</p>
+
+    </div>
+
+</details>
+<details>
+    <summary><a href="https://jupyterlab.readthedocs.io/en/stable/index.html">JupyterLab</a> Python Notebook</summary>
+    
+<div style="margin-left: 3em">
+        
+<p><a href="https://github.com/jupyterlab/jupyterlab">Github</a></p>
+
+        
+<p>Given how Termux doesn't like pip, and how JupyterLab + Kernels are generally hard to get working, messing with JupyterLab will likely be futile.</p>
+
+        
+<p>Try <code>pip3 install jupyterlab</code> at pray that it works.</p>
+
+    </div>
+
+</details>
+<details>
+    <summary><a href="https://github.com/coder/code-server">VS Code</a></summary>
+    
+<div style="margin-left: 3em">
+        
+<p><a href="https://github.com/coder/code-server">Github</a></p>
+
+        
+<p>You can do VS Code online at <a href="https://vscode.dev/">vscode.dev</a>, only caviat, you need to pay Github for hosting, or provide your own server.</p>
+
+        
+<p>At this point, consider signing up for Replit or some other online IDE. But if you are really set on hosting from your phone: they conviniently have <a href="https://coder.com/docs/code-server/termux#installation">a tutorial</a> on their official website. (tldr <code>pkg install code-server</code>)</p>
+
+    </div>
+
+</details>
+<ul>
+<li>No JupyterLab because pip breaks</li>
+<li>No Marimo because pip breaks</li>
+</ul>
+<h2 id="python-1"><a class="header" href="#python-1">Python</a></h2>
+<p>Yes, pip constantly fails to install stuff</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="python-2"><a href="#python-2" class="header">Python</a></h1>
+<p><a href="https://github.com/vinta/awesome-python">Awesome Python</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="managing-data"><a href="#managing-data" class="header">Managing Data</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<p>8 June 2026</p>
+<h1 id="hdf5"><a class="header" href="#hdf5">HDF5</a></h1>
+<p><a href="https://docs.h5py.org/en/stable/index.html">official hdf5py docs</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="plotting"><a href="#plotting" class="header">Plotting</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ax-and-fig-in-matplotlib"><a class="header" href="#ax-and-fig-in-matplotlib">Ax and Fig in Matplotlib</a></h1>
+<pre><code class="language-py">fig, ax = plt.subplots(figsize=(10, 3))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="printing-in-python"><a class="header" href="#printing-in-python">Printing in Python</a></h1>
+<p>list of tricks for advanced output to the terminal</p>
+<p>Created July 28th 2025 for Python 3.13.0</p>
+<h2 id="default-print"><a class="header" href="#default-print">Default Print</a></h2>
+<h3 id="color"><a class="header" href="#color">Color</a></h3>
+<h2 id="libraries"><a class="header" href="#libraries">Libraries</a></h2>
+<h3 id="pretty-print"><a class="header" href="#pretty-print">Pretty Print</a></h3>
+<pre><code class="language-py">import pprint as pp
+</code></pre>
+<h3 id="pretty-print-plus-plus"><a class="header" href="#pretty-print-plus-plus">Pretty Print Plus Plus</a></h3>
+<p>Just better Pretty Print, though less supported.</p>
+<p><a href="https://github.com/wolever/pprintpp">Github</a> (400 stars, last update in 2020)</p>
+<h3 id="icecream"><a class="header" href="#icecream">IceCream</a></h3>
+<p>Print for Debugging, automatically prints the variable being printed.</p>
+<pre><code class="language-py">from icecream import ic
+ic() # will print it's own filename and line number
+ic(max(3.141,6.283)) # ic| max(3.141,6.283): 6.283
+</code></pre>
+<p><a href="https://github.com/gruns/icecream">Github</a></p>
+<h3 id="rich"><a class="header" href="#rich">Rich</a></h3>
+<p>Powerful library for working with text in the terminal.</p>
+<p><a href="https://rich.readthedocs.io/en/stable/introduction.html">Docs</a></p>
+<pre><code class="language-py">from rich.pretty import pprint
+pprint(locals())
+</code></pre>
+<p><code>pip install rich</code></p>
+<h3 id="setprint"><a class="header" href="#setprint">SetPrint</a></h3>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="gmail-with-python"><a class="header" href="#gmail-with-python">Gmail with Python</a></h1>
+<p>Getting into Gmail with Python.</p>
+<p>Use a testing account.</p>
+<p>Simple way: (the way 3rd party clients like Thunderbird do it.)</p>
+<ul>
+<li>SMTP (comms between servers) <code>smtplib</code> is builtin</li>
+<li>POP3 (read only from email server) <code>poplib</code> is builtin</li>
+<li>IMAP (read/write with email server) <code>imaplib</code> is builtin
+<ul>
+<li><code>email</code> python library/parser</li>
+</ul>
+</li>
+</ul>
+<p>Complex way: <a href="https://developers.google.com/gmail/api/guides">Gmail API with Google Cloud</a> (good luck)</p>
+<p>Warning: Don’t hardcode tokens and keys. (<a href="python/dealing_with_secrets.html">how to handle secrets</a>)</p>
+<p>Config:</p>
+<ul>
+<li><a href="https://www.systoolsgroup.com/imap/">List of Servers/Subdomains for Major Email Providers</a> (<code>imap.gmail.com</code>)</li>
+<li>username/email <code>youremail@example.com</code></li>
+<li>password: Special “App Password”
+<ul>
+<li>You will need to click around in your account</li>
+</ul>
+</li>
+</ul>
+<h2 id="imap"><a class="header" href="#imap">IMAP</a></h2>
+<pre><code class="language-py">import os
+from dotenv import load_dotenv
+load_dotenv('.env')
+username = os.getenv('USERNAME')
+password = os.getenv('PASSWORD')
+
+import imaplib
+
+server = 'imap.gmail.com'
+imap = imaplib.IMAP4_SSL(server)
+imap.login(email, password)
+</code></pre>
+<pre><code class="language-py">print(imap.list()) # lists mailboxes
+status, messages = imap.select(mailbox="INBOX",readonly=True)
+</code></pre>
+<p>Emails on the server are assinged sequential IDs. Starting from 1.</p>
+<pre><code class="language-py">msg_uid = 10
+status, msg = imap.fetch(str(msg_uid),'(RFC822)') # no clue why RFC822
+# msg
+#  0: msg itself
+#  1: (uid, data)
+
+import email
+data = msg[1][1]
+m = email.message_from_bytes(data)
+
+print(m.get_payload())
+</code></pre>
+<h4 id="glossary"><a class="header" href="#glossary">Glossary</a></h4>
+<p><code>NOOP</code> command (<code>imap.noop()</code>) is a test packet. Similar to a ping.</p>
+<p>MIME is <a href="https://en.wikipedia.org/wiki/MIME">Multipurpose Internet Mail Extensions</a></p>
+<h3 id="header-fields"><a class="header" href="#header-fields">Header Fields</a></h3>
+<p><code>['Delivered-To', 'Received', 'X-Received', 'ARC-Seal', 'ARC-Message-Signature', 'ARC-Authentication-Results', 'Return-Path', 'Received', 'Received-SPF', 'Authentication-Results', 'DKIM-Signature', 'X-Google-DKIM-Signature', 'X-Gm-Message-State', 'X-Google-Smtp-Source', 'MIME-Version', 'X-Received', 'Date', 'X-Account-Notification-Type', 'Feedback-ID', 'X-Notifications', 'X-Notifications-Bounce-Info', 'Message-ID', 'Subject', 'From', 'To', 'Content-Type']</code></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Key</th><th>Description</th><th>Example</th></tr>
+</thead>
+<tbody>
+<tr><td><code>Subject</code></td><td>Subject line of the Email</td><td>“Shedule for Meeting”</td></tr>
+<tr><td><code>From</code></td><td>Sender Email Address</td><td>sender-email@example.com</td></tr>
+<tr><td><code>To</code></td><td>Recipient Email Address</td><td>recipient-email@example.com</td></tr>
+<tr><td><code>Date</code></td><td>Date in Long Format with time zone</td><td>Sun, 19 Jan 2025 00:11:46 GMT</td></tr>
+<tr><td></td><td><strong>More Obscure Fields</strong></td><td></td></tr>
+<tr><td><code>Content-Type</code></td><td>Media Type (<a href="https://www.iana.org/assignments/media-types/media-types.xhtml">Full List</a>)<br />boundary<br />charset</td><td><code>text/plain</code></td></tr>
+<tr><td><code>Received</code></td><td>by [IPv6] with [Protocol] id [alphanumberic]</td><td></td></tr>
+<tr><td><code>Delivered-To</code></td><td>Recipient Email Address</td><td>recipient-email@example.com</td></tr>
+</tbody>
+</table>
+</div>
+<h3 id="dealing-with-multipart-emails"><a class="header" href="#dealing-with-multipart-emails">Dealing with Multipart Emails</a></h3>
+<p>Content-Type: <code>multipart/alternative</code>, <code>mutlipart/mixed</code>, <a href="https://www.iana.org/assignments/media-types/media-types.xhtml#multipart">etc.</a></p>
+<p>Multipart Emails contain multiple parts with different types. And many email providers/clients don’t bother minimizing the type, just always use the universal multipart.</p>
+<p><code>.is_multipart()</code></p>
+<p>Iterator: Warning! first object is parent itself!</p>
+<ul>
+<li><code>.walk()</code> generator object to iteratre through all message parts.</li>
+</ul>
+<p>“part” object:</p>
+<ul>
+<li><code>.get_content_type()</code> (get subtype)</li>
+<li><code>.is_multipart()</code> (can be nested)</li>
+</ul>
+<h3 id="attachments"><a class="header" href="#attachments">Attachments</a></h3>
+<h3 id="actions"><a class="header" href="#actions">Actions</a></h3>
+<p>FLAGS:</p>
+<ul>
+<li><a href="https://stackoverflow.com/a/67319328">Marking Read/Unread</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="flask-python"><a class="header" href="#flask-python">Flask (Python)</a></h1>
+<p><a href="https://flask.palletsprojects.com/en/stable/quickstart/#a-minimal-application">flask official docs</a></p>
+<p><a href="https://flask.palletsprojects.com/en/stable/installation/">installation</a></p>
+<p><code>flask --app scriptfile.py run</code></p>
+<pre><code class="language-py">from flask import Flask, render_template, jsonify
+
+app = Flask(__name__)
+
+@app.route('/hello/&lt;path:subpath&gt;', methods=['GET', 'POST'])
+def hello_world(subpath):
+    return f"&lt;p&gt;Hello, World! {subpath}&lt;/p&gt;"
+    
+@app.route('/template/')
+@app.route('/template/&lt;name&gt;')
+def hello(name=None):
+    request_data = request.get_json(silent=True)
+    return render_template('hello.html', person=name)
+
+@app.rout('/json')
+def json():
+    dict = {"a": 0}
+    return jsonify(dict)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="python-gui-libraries"><a href="#python-gui-libraries" class="header">Python GUI Libraries</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dearpygui"><a href="#dearpygui" class="header">DearPyGui</a></h1>
+<p><a href="https://dearpygui.readthedocs.io/en/latest/">Docs</a></p>
+<p>Starter snippet</p>
+<pre><code class="language-py">import dearpygui.dearpygui as dpg
+
+dpg.create_context()
+
+with dpg.window(tag="Primary Window"):
+    dpg.add_text("Hello, world")
+
+dpg.create_viewport(title='Custom Title', width=600, height=200)
+dpg.setup_dearpygui()
+dpg.show_viewport()
+dpg.set_primary_window("Primary Window", True)
+dpg.start_dearpygui()
+dpg.destroy_context()
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="python-android"><a class="header" href="#python-android">Python Android</a></h1>
+<p><a href="https://docs.python.org/3/using/android.html">Official Python docs page concerning Android</a></p>
+<h2 id="buildozer--kivy"><a class="header" href="#buildozer--kivy">Buildozer / Kivy</a></h2>
+<p><a href="https://buildozer.readthedocs.io/en/latest/">Buildozer</a></p>
+<p>For some reason cli does not show up on MacOS.</p>
+<h2 id="briefcase--beeware"><a class="header" href="#briefcase--beeware">Briefcase / BeeWare</a></h2>
+<p><a href="https://briefcase.beeware.org/en/stable/">Briefcase Docs</a></p>
+<p>Basically the <a href="https://toga.beeware.org/en/stable/">Toga</a> GUI Framework.</p>
+<p>The Android Ecosystem is a nightmare, building the app took ages of downloading emulators and what not.</p>
+<h2 id="chaquopy"><a class="header" href="#chaquopy">ChaquoPy</a></h2>
+<p><a href="https://chaquo.com/chaquopy/">ChaquoPy</a></p>
+<p>Basically an ugly Java Wrapper.</p>
+<h2 id="pyqtdeploy"><a class="header" href="#pyqtdeploy">pyQtDeploy</a></h2>
+<p><a href="https://www.riverbankcomputing.com/static/Docs/pyqtdeploy/">site</a></p>
+<p>Last updated 2022.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="document-operations"><a class="header" href="#document-operations">Document Operations</a></h1>
+<p>Working with common file formats in Python</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="epub-in-python"><a class="header" href="#epub-in-python">Epub in Python</a></h1>
+<p>Written in October 2025</p>
+<p>General Apps: (for inspecting and verifying)</p>
+<ul>
+<li><a href="https://sigil-ebook.com/">Sigil Ebook Editor</a></li>
+</ul>
+<p>Libraries:</p>
+<ul>
+<li><a href="https://github.com/aerkalov/ebooklib">ebooklib</a> (basic r/w) currently under rewrite, so docs are horrible.</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pdf-in-python"><a class="header" href="#pdf-in-python">PDF in Python</a></h1>
+<p>Libraries:</p>
+<ul>
+<li><a href="https://py-pdf.github.io/fpdf2/index.html">fpdf2</a> for creating PDFs</li>
+</ul>
+<h2 id="fpdf2"><a class="header" href="#fpdf2">fpdf2</a></h2>
+<p><a href="https://py-pdf.github.io/fpdf2/PageBreaks.html">Docs</a></p>
+<pre><code class="language-py">from fpdf import FPDF
+
+pdf = FPDF()
+pdf.add_page()
+pdf.set_font("helvetica", style="B", size=16)
+pdf.cell(40, 10, "Hello World!")
+pdf.output("tuto1.pdf")
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="quarto"><a class="header" href="#quarto">Quarto</a></h1>
+<p><a href="https://quarto.org/">Website</a></p>
+<p>Document title:</p>
+<pre><code class="language-md">---
+title: My Notebook
+author: My Name
+date: 2026-02-08
+format:
+  html:
+    code-fold: true
+    code-summary: "Show the code"
+  pdf:
+    code-overflow: wrap
+    echo: false
+    output: true
+---
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="machine-learning"><a href="#machine-learning" class="header">Machine Learning</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="torch"><a href="#torch" class="header">Torch</a></h1>
+<h3 id="skeleton"><a class="header" href="#skeleton">Skeleton</a></h3>
+<p>Dataloader:</p>
+<pre><code class="language-py">class MyDataset(Dataset):
+    def __init__(self):
+    def __len__(self):
+        return 
+    def __getitem__(self, idx):
+        return X, y
+
+train_ds = MyDataset(TRAIN_PATH)
+test_ds = MyDataset(TEST_PATH)
+
+train_loader = DataLoader(
+    dataset=train_ds,        
+    batch_size=10,          
+    shuffle=True,
+)
+
+test_loader = DataLoader(
+    dataset=test_ds,        
+    batch_size=10,           
+    shuffle=True,           
+)
+</code></pre>
+<p>training code:</p>
+<pre><code class="language-py">model = nn.Sequential(
+    nn.Linear(len(input), 500),
+    nn.ReLU(),
+    nn.Linear(500, len(output))
+)
+
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+criterion = torch.nn.MSELoss() 
+
+epochs = 100
+for epoch in range(epochs):
+    model.train()
+    for batch_idx, (data, target) in enumerate(train_loader):
+        output = model(data)
+        loss = criterion(output, target)
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+    print(f"Epoch {epoch} complete. Loss: {loss.item():.4f}")
+</code></pre>
+<p>validation</p>
+<pre><code class="language-py">model.eval()
+val_loss = 0
+correct = 0
+with torch.no_grad():
+    for data, target in test_loader:
+        output = model(data)
+        val_loss += criterion(output, target).item()
+avg_loss = val_loss / len(test_loader)
+print("Validation loss", avg_loss)
+</code></pre>
+<p>alternatively, validation oneliner</p>
+<pre><code class="language-py">model.eval()
+with torch.no_grad():
+    # Calculate all batch losses in a single line
+    avg_loss = torch.tensor([criterion(model(x), y).item() for x, y in test_loader]).mean().item()
+print(f"Validation loss: {avg_loss}")
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="wandb"><a class="header" href="#wandb">wandb</a></h1>
+<pre><code class="language-zsh">pip install wandb
+</code></pre>
+<p><code>wandb login</code></p>
+<pre><code class="language-py">import wandb
+wandb.login()  # or will use the `wandb login` supplied account
+
+wandb.init(
+    entity="your-username-or-workspace-name",
+    project="my-experiments"
+)
+
+wandb.log({
+    "epoch": epoch,
+    "loss": loss,
+    "accuracy": accuracy,
+})
+</code></pre>
+<h2 id="for-hydra-integration"><a class="header" href="#for-hydra-integration">For Hydra Integration</a></h2>
+<pre><code class="language-py">@hydra.main(version_base=None, config_path="conf", config_name="config")
+def main(cfg: DictConfig):
+    wandb.init(
+        # entity=cfg.wandb.entity,
+        project=cfg.wandb.project
+    )
+</code></pre>
+<pre><code class="language-yaml">wandb:
+  project: "test"
+</code></pre>
+<p><a href="python/ml/hydra">my Hydra notes</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="hydra"><a class="header" href="#hydra">Hydra</a></h1>
+<p>pypi package name is <code>hydra-core</code></p>
+<p><a href="https://hydra.cc/docs/intro/">Hydra Offical Docs</a></p>
+<h2 id="boilerplate"><a class="header" href="#boilerplate">Boilerplate</a></h2>
+<pre><code class="language-py">import hydra
+import logging  # logging will be auto set up
+from omegaconf import DictConfig, OmegaConf
+
+@hydra.main(version_base=None, config_path="conf", config_name="config")
+def my_app(cfg : DictConfig) -&gt; None:
+    print(OmegaConf.to_yaml(cfg))
+
+if __name__ == "__main__":
+    my_app()
+</code></pre>
+<p>Turn off dir switching (and other stuff) <a href="https://stackoverflow.com/questions/65104134/disable-file-output-of-hydra">from stack overflow</a>:</p>
+<pre><code class="language-yaml"># Source - https://stackoverflow.com/a/70777327
+# Posted by J smit
+# Retrieved 2026-05-20, License - CC BY-SA 4.0
+
+defaults:  
+  - _self_  
+  - override hydra/hydra_logging: disabled  
+  - override hydra/job_logging: disabled  
+  
+hydra:  
+  output_subdir: null  
+  run:  
+    dir: .
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="linters"><a href="#linters" class="header">Linters</a></h1>
+<p>https://github.com/psf/black</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="logging"><a href="#logging" class="header">Logging</a></h1>
+<pre><code class="language-py">logging.basicConfig(
+    level=logging.INFO,
+    format="%(levelname)s: %(message)s",
+    handlers=[
+            logging.FileHandler('app.log'),
+            logging.StreamHandler(),
+        ]
+)
+logger = logging.getLogger(__name__)
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="manim"><a class="header" href="#manim">Manim</a></h1>
+<ul>
+<li><a href="https://docs.manim.community/">Manim Docs</a></li>
+<li><a href="https://flyingframes.readthedocs.io/en/latest/index.html">FlyingFrames by Kolibril</a></li>
+</ul>
+<p>Reender Qualities and Resolutions, also see <a href="https://en.wikipedia.org/wiki/16:9_aspect_ratio#Common_resolutions">Wikipedia</a></p>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Command</th><th>Quality</th></tr>
+</thead>
+<tbody>
+<tr><td><code>-ql</code></td><td>854x480 15FPS (FWVGA)</td></tr>
+<tr><td><code>-qm</code></td><td>1280x720 30FPS (HD)</td></tr>
+<tr><td><code>-qh</code></td><td>1920x1080 60FPS (FHD)</td></tr>
+<tr><td><code>-qp</code></td><td>2560x1440 60FPS (QHD)</td></tr>
+<tr><td><code>-qk</code></td><td>3840x2160 60FPS (4K UHD)</td></tr>
+</tbody>
+</table>
+</div>
+<p>Generally use the HD and FHD qualities, as QHD and 4K don’t work an all devices.</p>
+<p>Custom resolution: <code>-r 500,500</code></p>
+<p>Warning, the scale of the cordinate system is different from the reendering resolution. It is attached to be proportional to the resolution width. This is set by <code>config.frame_width=10</code></p>
+<p>Useful:</p>
+<ul>
+<li><code>-s</code> saves only the last frame of the animation</li>
+</ul>
+<h2 id="adding-objects"><a class="header" href="#adding-objects">Adding Objects</a></h2>
+<ul>
+<li><a href="https://docs.manim.community/en/stable/reference/manim.animation.creation.html">Creation / Introduction Animations</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="mamba"><a class="header" href="#mamba">Mamba</a></h1>
+<p><code>mamba env list</code></p>
+<p><code>mamba create -n &lt;envname&gt;</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="common-python-libs"><a class="header" href="#common-python-libs">Common Python Libs</a></h1>
+<ul>
+<li>scipy</li>
+<li><code>numpy</code></li>
+<li><code>sklearn</code></li>
+<li><code>matplotlib</code></li>
+<li><code>polars</code></li>
+<li><code>torch</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="relative-and-other-imports-in-python"><a class="header" href="#relative-and-other-imports-in-python">Relative and other Imports in Python</a></h1>
+<p>Basic block for importing from elsewhere in github directories.</p>
+<pre><code class="language-py">import sys
+from pathlib import Path
+
+github_root = Path.cwd().resolve().parents[2]
+sys.path.append(str(github_root))
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="bs4-scraping"><a href="#bs4-scraping" class="header">BS4 (Scraping)</a></h1>
+<pre><code class="language-py">soup = bs4.BeautifulSoup(html_doc, "html.parser")
+</code></pre>
+<p>for longer parses:</p>
+<pre><code class="language-py">try:
+    bs4.BeautifulSoup("&lt;div&gt;Test&lt;/div&gt;", features="lxml")
+    bs4_prefered_parser = "lxml"
+except bs4.FeatureNotFound:
+    bs4_prefered_parser = "html.parser"
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compiling-c-projects"><a class="header" href="#compiling-c-projects">Compiling C Projects</a></h1>
+<ol>
+<li>Read the damn docs and compilation instructions if available.</li>
+</ol>
+<h3 id="classic"><a class="header" href="#classic">Classic</a></h3>
+<p><em>Classic</em> way of compiling almost any project written in C.</p>
+<pre><code class="language-bash">./configure &amp;&amp; make &amp;&amp; make install
+</code></pre>
+<p>Breakdown:</p>
+<p><code>./configure</code> executes <code>configure</code> file to check dependencies</p>
+<p>! Note that <code>configure</code> often doesn’t exist initially, and a <code>autogen.sh</code> (or similar) must be run (<code>bash autogen.sh</code>) to generate <code>configure</code> and other setup stup steps.</p>
+<p><code>make</code></p>
+<p><code>make install</code></p>
+<h3 id="docs"><a class="header" href="#docs">Docs</a></h3>
+<p>Instructions for compiling/building/running are usually in <code>README.md</code>, <code>INSTALLING.md</code>,  or a similar file. <code>cat</code> to read them.</p>
+<p>The docs for small projects are usually outdated, files might have been moved around within the source code.</p>
+<p>Use <code>tree</code> command to see what files there are.</p>
+<p>Search for mentioned files in the source code via <a href="https://github.com/junegunn/fzf">fuzzy finder</a> <code>fzf</code> or <code>find . -name "autogen*"</code> (<code>find command options starting/path Regex</code>)</p>
+<h3 id="c-libraries"><a class="header" href="#c-libraries">C Libraries</a></h3>
+<p><code>pkg-config --list-all</code> to see all libraries you have installed.</p>
+<p>If you need to install a library, you can compile it yourself using pretty much the same steps here.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="littlejs"><a class="header" href="#littlejs">LittleJS</a></h1>
+<p><a href="https://github.com/KilledByAPixel/LittleJS">LittleJS Github Repository</a></p>
+<pre><code class="language-bash">curl https://raw.githubusercontent.com/KilledByAPixel/LittleJS/refs/heads/main/dist/littlejs.js &gt; littlejs.js
+</code></pre>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;&lt;head&gt;
+&lt;title&gt;LittleJS Hello World Demo&lt;/title&gt;
+&lt;meta charset=utf-8&gt;
+&lt;/head&gt;&lt;body&gt;
+
+&lt;script src=littlejs.js&gt;&lt;/script&gt;
+&lt;script src=game.js&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="language-bash">curl https://raw.githubusercontent.com/KilledByAPixel/LittleJS/refs/heads/main/examples/empty/game.js &gt; game.js
+</code></pre>
+<h1 id="js13k-build-and-buildjs"><a class="header" href="#js13k-build-and-buildjs">js13k build and build.js</a></h1>
+<p>Download the <code>build.js</code> script from the LittleJS repo, and <code>chmod +x build.js</code> to give it execution permissions. (Or just run it with <code>node</code>)</p>
+<p><code>build.js</code> won’t work out of the box, go in and edit the variables at the top.</p>
+<p>Issues:</p>
+<ul>
+<li>Some <code>npx &lt;tool&gt;</code> fails to run. Look it up on <a href="https://www.npmjs.com/">npmjs.com</a> and install globally via <code>npm</code>. eg. I had issues with <a href="https://www.npmjs.com/package/uglify-js">Uglify JS</a>.</li>
+<li>If the <code>game.zip</code> is not appearing, chech if <code>ect</code> (<a href="https://github.com/fhanau/Efficient-Compression-Tool">efficient compression tool</a>) is installed (<code>which ect</code>). <a href="#efficient-compression-tool">see my notes on compiling <code>ect</code></a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="lynx-browser"><a class="header" href="#lynx-browser">Lynx Browser</a></h1>
+<p>Famously cool browser, confusingly difficult to run.</p>
+<p><a href="https://lynx.invisible-island.net/">Official Lynx Website</a> has the latest stable version listed, as of writing it is 2.9.2.</p>
+<h2 id="installing"><a class="header" href="#installing">Installing</a></h2>
+<h3 id="package-manager"><a class="header" href="#package-manager">Package Manager</a></h3>
+<p>Lynx is fairly popular, so most package managers have a lynx package. (<a href="https://lynx.invisible-island.net/lynx-resources.html">see here</a>)</p>
+<p>You can check the version with <code>lynx --version</code></p>
+<h3 id="compiling-it-yourself"><a class="header" href="#compiling-it-yourself">Compiling it yourself</a></h3>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="w3m"><a class="header" href="#w3m">w3m</a></h1>
+<p><a href="https://en.wikipedia.org/wiki/W3m">w3m</a> is a CLI web browser written by a Japanese guy.</p>
+<p>It is <a href="https://w3m.sourceforge.net/">hosted on SouceForge</a>.</p>
+<p>Like <a href="getting-stuff-to-run/compiling_c_projects">most other C project</a>, run <code>./configure &amp;&amp; make &amp;&amp; make install</code> in the soure code directory.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="elinks"><a class="header" href="#elinks">Elinks</a></h1>
+<p>https://github.com/rkd77/elinks download latest release from releases (as of writing v0.18.0)</p>
+<p><code>./configure &amp;&amp; make &amp;&amp; make install</code></p>
+<p>you might notice <code>./configure</code> doesn’t work</p>
+<p>Run <code>./autogen.sh</code> and it <code>configure</code> will appear.</p>
+<p><code>.configure</code> should produce a list of features that will and won’t work based on prerequisite libraries. (Even if some are missing, that should be ok.)</p>
+<p><code>make</code> should compile and list bunch of linking (LD and CC) for the above libraries.</p>
+<p><code>make install</code> should put the final binary into your <code>bin</code> folder.</p>
+<p><code>elinks</code> should work now</p>
+<h3 id="installing-libraries"><a class="header" href="#installing-libraries">Installing Libraries</a></h3>
+<ul>
+<li><a href="#tre-regex-library">“tre” Regex Library</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="browsh"><a class="header" href="#browsh">Browsh</a></h1>
+<p><a href="https://www.brow.sh/">Browsh Offical Website</a> and <a href="https://github.com/browsh-org/browsh">Browsh Github repository</a>, also <a href="https://en.wikipedia.org/wiki/Browsh">Browsh</a></p>
+<p>As of writting, browsh is version 1.8.3. (<code>browsh --version</code>)</p>
+<p>Browsh is actually fairly well documented. See <code>SETUP_DEV_[Platform].md</code> for compilation instructions.x</p>
+<p>To Quit Browsh: <code>Ctrl+Q</code></p>
+<p>Context on innerworkings: Browsh has Firefox running in the background, and mirrors it into ANSI text on the terminal. It thus requires Firefox installed, and relies on it. In fact, you can view the mirrored instance using <code>browsh --firefox.with-gui</code>.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="optical-archiver-optar"><a class="header" href="#optical-archiver-optar">OPTical ARchiver (optar)</a></h1>
+<p>If you are building optar yourself, <a href="https://github.com/colindean/optar"><strong>download from github</strong></a> (<code>git clone https://github.com/colindean/optar</code>)</p>
+<p><a href="http://ronja.twibright.com/optar/">Outdated Website</a></p>
+<h2 id="dependencies"><a class="header" href="#dependencies">Dependencies</a></h2>
+<ul>
+<li><a href="https://libpng.org/pub/png/libpng.html">Libpng</a> (see <a href="#libpng">compiling libpng</a>)</li>
+<li>ImageMagick</li>
+</ul>
+<h2 id="compiling"><a class="header" href="#compiling">Compiling</a></h2>
+<p><code>make</code> will compile everything</p>
+<p><code>make install</code> (<code>sudo make install</code> if necessary) will install <code>optar</code>, <code>uoptar</code>, and <code>pgm2ps</code> into bin. (<code>/usr/local/bin</code>) you can check that with <code>which [command]</code>.</p>
+<h3 id="pgm2ps"><a class="header" href="#pgm2ps">pgm2ps</a></h3>
+<p><code>pgm2ps</code> is actually a shell script. You can open it in a plaintext editor and edit it.</p>
+<p>Run <code>which pgm2ps</code>, and edit it using any editor. (eg. <code>vi $(which pgm2ps)</code>)</p>
+<ul>
+<li>solve outdated imagemagic warning (see below)</li>
+<li>change from A4 to US Letter formats (see below)</li>
+</ul>
+<h2 id="writing-encoding"><a class="header" href="#writing-encoding">Writing (Encoding)</a></h2>
+<p><code>optar &lt;input file&gt; [filename base]</code> (filename base is basically output file name without an extension)</p>
+<p>This will roduce a <code>filename-base.pgm</code> file. <a href="https://netpbm.sourceforge.net/doc/pgm.html">PGM</a> is a “grayscale image format”.</p>
+<h3 id="converting-pgm2ps-stage"><a class="header" href="#converting-pgm2ps-stage">Converting pgm2ps Stage</a></h3>
+<p><code>pgm2ps &lt;file.pgm&gt;</code> or <code>pgm2ps *.pgm</code> to convert ALL <code>.pgm</code> files in the directory into printable PostScript (<code>.ps</code>).</p>
+<p>If there is a warning about <code>magick</code> and <code>covert</code>. Run <code>which pgm2ps</code>, (pgm2ps is just a shell script) and <code>vi &lt;path&gt;</code>. Then replace <code>covert</code> command with <code>magick</code>.</p>
+<h3 id="a4-and-us-letter-changes"><a class="header" href="#a4-and-us-letter-changes">A4 and US Letter changes</a></h3>
+<p>If you want to change to A4 (default) or US Letter, you have to edit <code>which pgm2ps</code> file. Substitute the following equations as described in comments within pgm2ps:</p>
+<ul>
+<li>US Letter: 573.84x755.28+19.08+18.36</li>
+<li>A4: 556.56x807.12+19.22+17.44</li>
+</ul>
+<p>PostScript (<code>.ps</code>) is the file format printers use for printing. Gimp can open <code>.ps</code> and <code>.pgm</code> file formats, for checking if they are ok.</p>
+<h2 id="reading-decoding"><a class="header" href="#reading-decoding">Reading (Decoding)</a></h2>
+<p>Just <a href="https://github.com/colindean/optar?tab=readme-ov-file#decoding-reading">check the docs</a></p>
+<p>You will need an industrial grade scanner for this.</p>
+<p><code>unoptar &lt;format-specs&gt; filename-base &gt; outputfile</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="dragon"><a class="header" href="#dragon">Dragon</a></h1>
+<p>https://github.com/mwh/dragon</p>
+<p>How to run the dragon cli tool for drag and dropping files.</p>
+<p>Dependencies: GTK+ 3, X11 or Wayland</p>
+<p>You are required to build it yourself, no binaries are available. Also development seems to have halted with v1.2.0 in 2022. These instructions are for MacOS.</p>
+<p>The <a href="https://github.com/mwh/dragon">official README</a> has great installation instructions.</p>
+<p>To start, <code>cd</code> into some folder you don’t mind having a bit of junk files in. eg. <code>cd ~/Downloads</code></p>
+<ol>
+<li>
+<p><code>git clone https://github.com/mwh/dragon.git</code></p>
+</li>
+<li>
+<p><code>cd dragon</code> to enter the folder with the sourcecode</p>
+</li>
+<li>
+<p><code>make</code> will use the <code>Makefile</code> file to compile dragon binary.</p>
+<ol>
+<li>Dealing with dependecy issues. Dragon requries GTK+ 3. For MacOS <code>brew install gtk+3</code></li>
+<li>You might need to install X or X11 window manager. Just google how to install it.</li>
+</ol>
+</li>
+<li>
+<p><code>make install</code> to but the dragon binary into the bin folder.</p>
+</li>
+<li>
+<p><code>dragon</code> will run dragon and print <code>Usage: dragon [OPTIONS] FILENAME</code></p>
+</li>
+<li>
+<p><code>dragon example</code> will create a window with a drag-and-droppable folder from the <code>example</code> folder in the source code directory. (<code>ls</code>)</p>
+</li>
+</ol>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="random-libraries"><a href="#random-libraries" class="header">Random Libraries</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="tre-regex-library"><a class="header" href="#tre-regex-library">Tre Regex Library</a></h1>
+<p>https://github.com/laurikari/tre</p>
+<p><code>git clone https://github.com/laurikari/tre</code></p>
+<p><code>./utils/autogen.sh</code> (creates <code>configure</code> executeable among other things)</p>
+<pre><code>./configure
+make
+make check
+make install
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="libpng"><a class="header" href="#libpng">Libpng</a></h1>
+<p><a href="https://libpng.org/pub/png/libpng.html">Download source</a></p>
+<p>Warning, the <code>configure</code> and other files have carriage retrun <code>\r</code> characters. You need to remove them, because sh hates them.</p>
+<p>To remove carriage returns</p>
+<p><code>sed -i.bak 's/\r$//g' &lt;filename&gt;</code></p>
+<p><code>sed -i.bak 's/\r$//g' configure</code></p>
+<pre><code>./configure
+make check
+make install
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="efficient-compression-tool"><a class="header" href="#efficient-compression-tool">Efficient Compression Tool</a></h1>
+<p>Repo: <a href="https://github.com/fhanau/Efficient-Compression-Tool">Efficient Compression Tool</a></p>
+<p>Created Sat Sep 13 15:38:28 EDT 2025, as of right now last ect update was in 2023.</p>
+<p>ect cmake configs are outdated. Use<code>cmake ../src -DCMAKE_POLICY_VERSION_MINIMUM=3.5</code>.</p>
+<p>then <code>make</code> and <code>make install</code> as per README instructions.</p>
+<p>If you get issue about <code>fp.h</code> in <code>pngpriv.h</code>. Replace the <code>include &lt;fp.h&gt;</code> with <code>include &lt;math.h&gt;</code> (inside <code>/src/libpng/pngpriv.h</code>)</p>
+<p>Build steps are pretty self explanatory with cmake and Xcode.</p>
+<ul>
+<li>install cmake with brew</li>
+<li>Xcode on mac is a known pain, Google everything</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="data-hoarding"><a href="#data-hoarding" class="header">Data Hoarding</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<p><strong>Currently still can’t get it to work.</strong></p>
+<h1 id="grab-site-website-archiver"><a class="header" href="#grab-site-website-archiver">grab-site website archiver</a></h1>
+<p><a href="https://github.com/ArchiveTeam/grab-site?tab=readme-ov-file#install-on-macos">Github repo</a> by Archive Team</p>
+<h3 id="installation-on-apple-silicon"><a class="header" href="#installation-on-apple-silicon">Installation on Apple Silicon</a></h3>
+<p>(on August 2025 for MacOS 15.6 with Python 3.13.0 and grab-site 2.2.7)
+<code>brew update</code> update homebrew
+<code>brew install libxslt re2 pkg-config</code> install libraries via homebrew</p>
+<ul>
+<li>libxslt is for XML parsing</li>
+<li>re2 is a regex library</li>
+<li>pkg-config is for compiling libraries (not sure)
+<code>python3 -m venv ~/gs-venv</code> create python virtual environment, and puts its config at <code>~/gs-venv</code>
+<code>PKG_CONFIG_PATH="/usr/local/opt/libxml2/lib/pkgconfig"</code> make sure pkg-config works before the next step
+<code>~/gs-venv/bin/pip3 install lxml</code> install lxml library into virtual environment
+<code>~/gs-venv/bin/pip3 install git+https://github.com/ArchiveTeam/grab-site</code> install <strong>grab-site</strong> from github into the virtual environment.
+If it fails to compile due to cchardet being deprecated.</li>
+</ul>
+<p>Add <code>PATH="$PATH:$HOME/gs-venv/bin"</code> to <code>~/.zshrc</code> (or equivalent). Then restart terminal or <code>source .zshrc</code>.</p>
+<h2 id="usage"><a class="header" href="#usage">Usage</a></h2>
+<p><code>gs-server</code> and see menu at http://127.0.0.1:29000/ (localhost)</p>
+<p><code>grab-site 'URL'</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="windows-operating-system"><a class="header" href="#windows-operating-system">Windows Operating System</a></h1>
+<p>Entering boot menu:</p>
+<ol>
+<li>Shift + Restart</li>
+<li>Troubleshooting</li>
+<li>Advanced options</li>
+<li>Start</li>
+<li>Fn + F12</li>
+</ol>
+<p><a href="https://github.com/Raphire/Win11Debloat?tab=readme-ov-file">Windows 11 Debloat</a></p>
+<p><a href="https://github.com/Sycnex/Windows10Debloater">Windows 10 Debloat</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="c"><a href="#c" class="header">C++</a></h1>
+<h2 id="resources"><a class="header" href="#resources">Resources</a></h2>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="file-io-in-c"><a class="header" href="#file-io-in-c">File IO in C++</a></h1>
+<pre><code class="language-cpp">#include &lt;cstdio&gt;
+#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;string&gt;
+using namespace std;
+
+void fileFunction(const std::string&amp; filename)
+{
+    std::string line;
+    std::ifstream fh(filename);
+    if (fh.is_open()) {
+        while (std::getline(fh, line)) {
+            std::cout &lt;&lt; line &lt;&lt; std::endl;
+        }
+    } else {
+        std::cout &lt;&lt; "Unable to open file" &lt;&lt; std::endl;
+    }
+    fh.close();
+    std::cout &lt;&lt; "File Closed" &lt;&lt; std::endl;
+}
+
+int main(int argc, char** argv) {
+  fileFunction("file.txt");
+  return 0;
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="javascript"><a href="#javascript" class="header">Javascript</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="vue"><a class="header" href="#vue">Vue</a></h1>
+<p>Component template</p>
+<pre><code class="language-html">&lt;script setup&gt;
+&lt;/script&gt;
+
+&lt;template&gt;
+    &lt;p&gt;Hello, World!&lt;/p&gt;
+&lt;/template&gt;
+
+&lt;script scoped&gt;&lt;/script&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="canvas-api"><a class="header" href="#canvas-api">Canvas API</a></h1>
+<pre><code class="language-js">const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
+
+ctx.fillStyle = "green";
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+</code></pre>
+<h3 id="imagedata"><a class="header" href="#imagedata">ImageData</a></h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/ImageData">MDN Docs on ImageData</a></p>
+<pre><code class="language-js">let data = ctx.getImageData(x,y,w,h);
+data = data.forEach((element,index,array)=&gt;((index)%4==0? 255 : element));
+ctx.putImageData(data,x,y);
+</code></pre>
+<p>Creating ImageData</p>
+<pre><code class="language-js">let len = width * height * 4;
+let data = new Uint8ClampedArray(len);
+for (let i = 0; i &lt; len; i+=4) {
+  let color = Math.random() &lt; (0.5) ? 255 : 0;
+  data[i+0] = color;
+  data[i+1] = color;
+  data[i+2] = color;
+}
+return new ImageData(data,width,height);
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="qrcodejs"><a class="header" href="#qrcodejs">qrcode.js</a></h1>
+<p>Last update 10 years ago.</p>
+<p><a href="https://davidshimjs.github.io/qrcodejs/">Website</a></p>
+<p>Unofficial CDN:</p>
+<ul>
+<li><a href="https://cdnjs.com/libraries/qrcodejs">CDNJS</a>:
+<ul>
+<li>Full <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js" integrity="sha512-is1ls2rgwpFZyixqKFEExPHVUUL+pPkBEPw47s/6NDQ4n1m6T/ySeDW3p54jp45z2EJ0RSOgilqee1WhtelXfA==" crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;</code></li>
+<li>Min <code>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA==" crossorigin="anonymous" referrerpolicy="no-referrer"&gt;&lt;/script&gt;</code></li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="pixijs"><a class="header" href="#pixijs">Pixi.js</a></h1>
+<ol>
+<li>Pixi.js is not a “game engine” but a “reendering engine” consequently it doesn’t have basic features like collision detection.</li>
+</ol>
+<p><a href="https://github.com/pixijs/pixijs">Github</a></p>
+<p>Mouse Events:</p>
+<pre><code class="language-js">app.stage.eventMode = "static";
+app.stage.hitArea = app.screen;
+app.stage.on('pointermove', event =&gt; {
+    console.log(event.global.x, event.global.y)
+});
+</code></pre>
+<p>Ticker</p>
+<pre><code class="language-js">app.ticker.add((delta) =&gt; {
+  let fraction_of_second = delta.deltaTime;
+});
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="js-math-tricks"><a class="header" href="#js-math-tricks">JS Math Tricks</a></h1>
+<p><a href="https://stackoverflow.com/a/4228528/26427793">Integer Division</a></p>
+<pre><code class="language-js">let result = ~~(a/b); // double NOT operator forces int casting
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="extension-setup"><a class="header" href="#extension-setup">Extension Setup</a></h1>
+<p>Tooling</p>
+<ul>
+<li>Editor with standard JS highlighting</li>
+<li><a href="https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/">web-ext</a> cli tool for making Web Extensions (official by mozilla)
+<ul>
+<li><code>brew install web-ext</code></li>
+</ul>
+</li>
+<li><code>about:debugging#/runtime/this-firefox</code> for debugging background.js</li>
+</ul>
+<h3 id="resources-1"><a class="header" href="#resources-1">Resources</a></h3>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension">MDN Docs</a>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json">manifest.json docs</a></li>
+</ul>
+</li>
+<li><a href="https://extensionworkshop.com/">Mozilla Extension Workshop</a>
+<ul>
+<li><a href="https://github.com/mozilla/extension-workshop">Github</a></li>
+</ul>
+</li>
+<li><a href="https://stackoverflow.com/questions/tagged/firefox-addon">Firefox-addon Stackoverflow</a></li>
+<li><a href="https://firefox-source-docs.mozilla.org/index.html">Firefox Source Docs</a></li>
+<li><a href="https://github.com/davestewart/awesome-webext-dev">Awesome Webext Dev</a></li>
+</ul>
+<h2 id="web-ext-running"><a class="header" href="#web-ext-running">Web-ext Running</a></h2>
+<p><code>web-ext run</code> opens a test browser. Press R to reloat the test browser.</p>
+<h2 id="anatomy"><a class="header" href="#anatomy">Anatomy</a></h2>
+<pre><code>extension
+L icons
+  L icon.png
+L manifest.json
+L background.js // runs on the browser level
+L content.js // runs inside the tab, is injected into website's html
+L popup
+  L index.html // &lt;script src="popup.js"&gt;&lt;/script&gt;
+  L popup.js
+</code></pre>
+<h2 id="common-apis"><a class="header" href="#common-apis">Common APIs</a></h2>
+<h3 id="communication-between-scripts"><a class="header" href="#communication-between-scripts">Communication Between Scripts</a></h3>
+<p>Communication with content script requires Query. Background to Popup can do normal Messages. (Because there is one background and popup, but content.js in each tab).</p>
+<details>
+<summary>Relay Code</summary>
+<pre><code class="language-js">// background.js
+browser.runtime.onMessage.addListener((message, sender) =&gt; {
+  if (message.to === "popup") {
+    // Send to popup
+    browser.runtime.sendMessage({ from: "content", data: message.data });
+  }
+
+  if (message.to === "content") {
+    // Forward to active tab’s content script
+    return browser.tabs.query({ active: true, currentWindow: true })
+      .then(tabs =&gt; {
+        if (tabs[0]) {
+          browser.tabs.sendMessage(tabs[0].id, { from: "popup", data: message.data });
+        }
+      });
+  }
+});
+</code></pre>
+<pre><code class="language-js">// content.js
+browser.runtime.sendMessage({ to: "popup", data: "Hello from content script!" }); // the to: "popup" is read by background for forwarding
+
+browser.runtime.onMessage.addListener((message) =&gt; {
+  if (message.from === "popup") {
+    console.log("Content got:", message.data);
+  }
+});
+
+</code></pre>
+<pre><code class="language-js">// popup.js
+document.getElementById("send").addEventListener("click", () =&gt; {
+  browser.runtime.sendMessage({ to: "content", data: "Hello from popup!" });
+});
+
+// Listen for content messages
+browser.runtime.onMessage.addListener((message) =&gt; {
+  if (message.from === "content") {
+    console.log("Popup got:", message.data);
+    document.getElementById("log").textContent = "Popup got: " + message.data;
+  }
+});
+
+</code></pre>
+</details>
+<details>
+<summary>Query Code</summary>
+<pre><code class="language-js">// popup.js
+async function askContent() {
+  let [tab] = await browser.tabs.query({ active: true, currentWindow: true });
+  let response = await browser.tabs.sendMessage(tab.id, { type: "GET_INFO" });
+  console.log("Got from content:", response);
+}
+
+askContent();
+</code></pre>
+<pre><code class="language-js">// content.js
+browser.runtime.onMessage.addListener((message, sender, sendResponse) =&gt; {
+  if (message.type === "GET_INFO") {
+    sendResponse("Here is the info from content script");
+  }
+});
+</code></pre>
+</details>
+<h3 id="downloading"><a class="header" href="#downloading">Downloading</a></h3>
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/downloads/download">downloads.download() MDN docs</a>. Also supports saving to within a folder</p>
+<pre><code class="language-js">let downloading = browser.downloads.download({
+  url: downloadUrl,
+  // or body: "text goes here",
+  filename: "Subfolder/file.txt",
+  conflictAction: "uniquify",
+});
+// downloading can then be used for error handling, see docs
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="popup"><a class="header" href="#popup">Popup</a></h1>
+<p>For devtools, open <code>about:debugging#/runtime/this-firefox</code> &gt; Inspect</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups">Popup MDN docs</a></p>
+<h2 id="page-action"><a class="header" href="#page-action">Page Action</a></h2>
+<p><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction">Page action</a> (and <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions">Address bar button</a>) are <em>tab specific</em>. <del>The code for them is written in <code>popup.js</code> (browser-action script).</del> idk yet where it goes.</p>
+<p>The main methods are</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup">setPopup</a> to specific html file to use</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked">onClicked</a></li>
+<li><code>browser.pageAction.show(tabId)</code> and <code>browser.pageAction.hide(tabId)</code>
+to get tabId use <code>browser.tabs.query({ active: true, currentWindow: true })[0].id</code></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="threejs"><a class="header" href="#threejs">ThreeJS</a></h1>
+<p>Docs:</p>
+<ul>
+<li><a href="https://threejs.org/">Main Website</a></li>
+<li><a href="https://threejs.org/manual/">Main Website Manual/Docs</a></li>
+<li><a href="https://hellowac.github.io/graphicsbook-zh-cn/en/c5/s1.html">Introduction to Computer Graphics book</a></li>
+<li><a href="https://stemkoski.github.io/Three.js/">Three.js Examples</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="excaliburjs"><a class="header" href="#excaliburjs">Excalibur.js</a></h1>
+<p><a href="https://excaliburjs.com/">Website</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="scrapping-with-javascript"><a class="header" href="#scrapping-with-javascript">Scrapping With JavaScript</a></h1>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/DOMParser">DOM Parser</a> creates a <code>document</code> from plaintext html.</p>
+<p><a href="https://stackoverflow.com/questions/817218/how-to-get-the-entire-document-html-as-a-string">Grabbing the entire HTML document with JS - Stackoverflow</a></p>
+<ul>
+<li><code>'&lt;!DOCTYPE HTML&gt;' + '\n' + document.documentElement.outerHTML</code></li>
+<li><code>new XMLSerializer().serializeToString(document)</code></li>
+</ul>
+<p><code>new URL("https://example.org/")</code></p>
+<h2 id="querries"><a class="header" href="#querries">Querries</a></h2>
+<pre><code class="language-js">document.querySelectorAll("h1, h2, h3, h4, h5, h6");
+</code></pre>
+<h2 id="abstract-objects"><a class="header" href="#abstract-objects">Abstract Objects</a></h2>
+<p>Getting position on page
+<a href="https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element">Stackoverflow</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect">MDN Docs getBoundingClientRect</a></p>
+<pre><code class="language-js">// relative to viewport
+var rect = element.getBoundingClientRect(); // read only
+console.log(rect.top, rect.right, rect.bottom, rect.left);
+// adjust for scroll
+rect.left+window.scrollX;
+rect.top+window.scrollY
+// for reference
+window.screen.width;
+window.screen.height
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="w3"><a class="header" href="#w3">W3</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="html-boilerplate"><a class="header" href="#html-boilerplate">HTML Boilerplate</a></h1>
+<p>Sources:</p>
+<ul>
+<li><a href="https://htmlboilerplates.com/">HTMLBoilerplates.com</a></li>
+</ul>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;title&gt;Template Title&lt;/title&gt;
+        &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+        &lt;meta name="description" content="Description Goes Here" /&gt;
+        &lt;link rel="stylesheet" type="text/css" href="style.css" /&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Template&lt;/h1&gt;
+        &lt;script src="index.js"&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fullscreen_API">Fullscreen</a></p>
+<pre><code class="language-js">// On pressing ENTER call toggleFullScreen method
+document.addEventListener("keydown", (e) =&gt; {
+  if (e.key === "Enter") {
+    toggleFullScreen(element);
+  }
+});
+function toggleFullScreen(element) {
+  if (!document.fullscreenElement) {
+    // If the document is not in full screen mode
+    // make the video full screen
+    element.requestFullscreen();
+  } else {
+    // Otherwise exit the full screen
+    document.exitFullscreen?.();
+  }
+}
+</code></pre>
+<h2 id="related"><a class="header" href="#related">Related</a></h2>
+<ul>
+<li><a href="w3/javascript/canvas.html">Canvas API</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="page-quality-checkers"><a class="header" href="#page-quality-checkers">Page Quality Checkers</a></h1>
+<p><a href="https://validator.w3.org/">w3c validator “nu”</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="markdown"><a class="header" href="#markdown">Markdown</a></h1>
+<p><a href="https://github.com/mundimark/awesome-markdown?tab=readme-ov-file#markdown-documentation">Awesome Markdown</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="markdown-to-html"><a class="header" href="#markdown-to-html">Markdown To HTML</a></h1>
+<h2 id="fake-latex-for-assignments"><a class="header" href="#fake-latex-for-assignments">Fake Latex For Assignments</a></h2>
+<p>Courses demand I use LaTeX, but I want to use markdown, so I will make fake LaTeX.</p>
+<p>Workflow:</p>
+<blockquote>
+<p>write markdown in normal editor -&gt; convert to HTML via pandoc -&gt; Style HTML using a lookalike stylesheet -&gt; covert html to pdf (by printing in browser) -&gt; submit</p>
+</blockquote>
+<p>Note: Pandoc can also do direct MD -&gt; LaTeX coversions</p>
+<p>I will use <a href="https://latex.vercel.app/">Latex.vercel.app</a> style sheet.
+<code>&lt;link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" /&gt;</code></p>
+<p>Final pandoc command: <code>pandoc --mathml -o=output.html --template=template.html input.md</code> See <code>template.html</code> below</p>
+<p>Relevant Docs:</p>
+<ul>
+<li><a href="https://pandoc.org/MANUAL.html#templates">Pandoc templates</a>
+<ul>
+<li>standalone <code>-s</code>, <code>--standalone</code></li>
+<li>see defualt template <code>pandoc -D html</code></li>
+<li><code>--template=file.html</code></li>
+</ul>
+</li>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/break-after">break-after: page</a>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/hr">MDN docs for <code>&lt;hr&gt;</code> tag</a></li>
+<li>Markdown <code>---</code> line is converted into <code>&lt;hr&gt;</code></li>
+<li><code>hr {break-after: page}</code> allows to split pages of the pdf</li>
+</ul>
+</li>
+<li><a href="https://www.mathjax.org/">MathJax</a> converter <code>&lt;script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"&gt;&lt;/script&gt;</code></li>
+<li><a href="https://pandoc.org/demo/example33/3.6-math-rendering-in-html.html">Pandoc Math reendering in HTML</a> (tldr use <code>--mathml</code>)</li>
+</ul>
+<p>template.html</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8" /&gt;
+        &lt;title&gt;Fake Latex Assignment&lt;/title&gt;
+        &lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;
+        &lt;meta name="description" content="Description Goes Here" /&gt;
+        &lt;link rel="stylesheet" href="https://unpkg.com/latex.css/style.min.css" /&gt;
+        &lt;style&gt;
+            hr {
+                break-after: page;
+                visibility: hidden;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        $body$
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="markdown-to-presentation"><a class="header" href="#markdown-to-presentation">Markdown To Presentation</a></h1>
+<pre><code>pandoc -t FORMAT --standalone habits.txt -o habits.html
+
+where FORMAT is either s5, slidy, slideous, dzslides, or revealjs.
+</code></pre>
+<p>https://pandoc.org/MANUAL.html#slide-shows</p>
+<p>Pandoc can convert markdown into <code>revealjs</code> and other formats.</p>
+<p>Pandoc markup:</p>
+<pre><code class="language-md">% Title
+% Firstname Lastname
+% Month Day, Year
+
+# Slide 1
+
+## Subslide 1
+
+slide 2
+
+## Subslide 1
+- bullets
+- bullet
+
+------------------
+
+# Slide 2
+![Lorem Picsum](https://picsum.photos)
+
+</code></pre>
+<p>List of presentation tips:</p>
+<ul>
+<li>make it easy to setup and reset</li>
+<li>avoid overusing words</li>
+<li>people can look either you or the slides at a time</li>
+<li>big font</li>
+<li>QR codes</li>
+<li>top talking speed is 3 words per second</li>
+<li>top comprehension is 1 fact / second</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rust"><a class="header" href="#rust">Rust</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="rust-iced-library"><a class="header" href="#rust-iced-library">Rust Iced Library</a></h1>
+<p>Rust Iced GUI Library</p>
+<p><a href="https://github.com/iced-rs/iced">Official Github Repo</a></p>
+<ul>
+<li><a href="https://docs.rs/iced/latest/iced/">Reference</a></li>
+<li><a href="https://github.com/iced-rs/iced/tree/master/examples">Examples</a></li>
+<li><a href="https://github.com/iced-rs/awesome-iced">Projects that use Iced</a></li>
+</ul>
+<p>Guides:</p>
+<ul>
+<li><a href="https://jl710.github.io/iced-guide/index.html">by jl710</a></li>
+<li><a href="https://github.com/fogarecious/iced_tutorial/blob/main/tutorial/first_app.md">tutorial by fogarecious</a></li>
+</ul>
+<h2 id="basic-widgets"><a class="header" href="#basic-widgets">Basic Widgets</a></h2>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>button("Button").on_press(Message::ButtonPressed)
+<span class="boring">}</span></code></pre>
+<h2 id="layout"><a class="header" href="#layout">Layout</a></h2>
+<p>The layout is a bunch of nested lists, they way you expect:</p>
+<pre class="playground"><code class="language-rust"><span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>container() // takes one element
+column![]
+row![]
+<span class="boring">}</span></code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compiling-with-cargo"><a href="#compiling-with-cargo" class="header">Compiling with Cargo</a></h1>
+<h2 id="crazy-target-file-sizes"><a class="header" href="#crazy-target-file-sizes">Crazy Target File sizes</a></h2>
+<p>Cargo <code>target</code> directories are 1GB+ in size for basic projects</p>
+<p>To decrease size:</p>
+<ul>
+<li><a href="https://doc.rust-lang.org/cargo/reference/features.html#the-default-feature">Disable features of libraries</a></li>
+<li><a href="https://users.rust-lang.org/t/is-there-a-way-to-make-the-size-of-whole-project-files-smaller/100758/3">Disable debug</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="c-1"><a href="#c-1" class="header">C</a></h1>
+<h2 id="boilerplate-1"><a class="header" href="#boilerplate-1">Boilerplate</a></h2>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+int main(int argc, char *argv[]) {
+    printf("Hello, World!\n");
+}
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compiling-libraries"><a href="#compiling-libraries" class="header">Compiling Libraries</a></h1>
+<h2 id="create-static-library"><a class="header" href="#create-static-library">Create static library</a></h2>
+<p>write <code>foo.c</code> and <code>foo.h</code></p>
+<pre><code class="language-c">// foo.h
+#ifndef FOO_H
+#define FOO_H
+int add(int a, int b); // just the headers
+int multiply(int a, int b);
+#endif
+</code></pre>
+<p><code>gcc -c foo.c -o foo.o</code></p>
+<p><code>-c</code> means compile an object.</p>
+<p><code>ar rcs libfoo.a foo.o</code></p>
+<ul>
+<li><code>r</code> (replace)</li>
+<li><code>c</code> (create archive if it doesn’t exist)</li>
+<li><code>s</code> (index to speed things up)</li>
+</ul>
+<h2 id="use-static-library"><a class="header" href="#use-static-library">use static library</a></h2>
+<p><code>gcc myscript.c -L. -lfoo -o myscript.a</code></p>
+<p>the <code>-lfoo</code> automatically looks for <code>libfoo</code> with prefix.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="simple-directmedia-layer"><a class="header" href="#simple-directmedia-layer">Simple Directmedia Layer</a></h1>
+<p><a href="https://www.libsdl.org/">Libsdl.org website</a></p>
+<h2 id="compiling-1"><a class="header" href="#compiling-1">Compiling</a></h2>
+<p><code>gcc -std=c89 -Wextra -pedantic-errors -o main.out main.c -lSDL2 ./main.out</code></p>
+<h2 id="examples"><a class="header" href="#examples">Examples</a></h2>
+<p>Drawing colored pixels:</p>
+<pre><code class="language-cpp">//  https://stackoverflow.com/questions/20579658/how-to-draw-pixels-in-sdl-2-0
+#include &lt;stdlib.h&gt;
+
+#include &lt;SDL2/SDL.h&gt;
+
+#define WINDOW_WIDTH 600
+
+int main(void) {
+    SDL_Event event;
+    SDL_Renderer *renderer;
+    SDL_Window *window;
+    int i;
+
+    SDL_Init(SDL_INIT_VIDEO);
+    SDL_CreateWindowAndRenderer(WINDOW_WIDTH, WINDOW_WIDTH, 0, &amp;window, &amp;renderer);
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 0);
+    SDL_RenderClear(renderer);
+    SDL_SetRenderDrawColor(renderer, 255, 0, 0, 255);
+    for (i = 0; i &lt; WINDOW_WIDTH; ++i)
+        SDL_RenderDrawPoint(renderer, i, i);
+    SDL_RenderPresent(renderer);
+    while (1) {
+        if (SDL_PollEvent(&amp;event) &amp;&amp; event.type == SDL_QUIT)
+            break;
+    }
+    SDL_DestroyRenderer(renderer);
+    SDL_DestroyWindow(window);
+    SDL_Quit();
+    return EXIT_SUCCESS;
+}
+</code></pre>
+<p>Reading Images:</p>
+<ul>
+<li>https://gamedev.stackexchange.com/questions/131138/how-to-pass-png-image-data-directly-to-sdl</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="io"><a href="#io" class="header">IO</a></h1>
+<p><a href="https://quickref.me/c.html#file-processing">Quickref.me File Processing Entry</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="latex"><a class="header" href="#latex">LaTeX</a></h1>
+<p>aka Tex, MathJax</p>
+<p><code>Ctrl+F</code> to search.
+<code>pdflatex file.tex</code> to compile</p>
+<p>Symbol lookup:</p>
+<ul>
+<li><a href="https://detexify.kirelabs.org/classify.html">Detexify</a> (for symbols)</li>
+<li><a href="https://quickref.me/latex">QuickRef.ME</a> (for general math)</li>
+<li><a href="https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference">MathJax Basic Tutorial and Quick Reference</a></li>
+</ul>
+<h3 id="front-matters"><a class="header" href="#front-matters">Front Matters</a></h3>
+<pre><code class="language-tex">% metadata
+\documentclass{article}
+\title{Test}
+\author{Me}
+\date{\today}
+% displayed
+\begin{document}
+\maketitle
+\end{document}
+</code></pre>
+<ul>
+<li><a href="https://tex.stackexchange.com/questions/782/what-are-the-available-documentclass-types-and-their-uses">documentclasses Stackexchange Discussion</a>, main classes <code>article, proc, minimal, report, book, slides, memoir, letter, beamer</code></li>
+</ul>
+<h3 id="basic-math"><a class="header" href="#basic-math">Basic Math</a></h3>
+<h2 id="resources-2"><a class="header" href="#resources-2">Resources</a></h2>
+<ul>
+<li><a href="https://tobi.oetiker.ch/lshort/lshort.pdf">Not So Short Introduction to LaTeX</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="working-with-file-system-in-python"><a class="header" href="#working-with-file-system-in-python">working with File System in Python</a></h1>
+<p>Main libraries:</p>
+<ul>
+<li><code>import os</code> (<a href="https://docs.python.org/3/library/os.html">os docs</a>)</li>
+<li><code>import pathlib</code> (<a href="https://docs.python.org/3/library/pathlib.html">pathlib docs</a>)</li>
+</ul>
+<p>Setup</p>
+<ul>
+<li>For pathlib operations of file system, <code>Path("the/path/string.txt")</code></li>
+<li>For pathlib operations of file path use <code>PurePath("the/path/string.txt")</code></li>
+</ul>
+<h2 id="managing-files"><a class="header" href="#managing-files">Managing Files</a></h2>
+<p>Listing files:</p>
+<pre><code>from os import listdir
+path = "."
+print(listdir(path))
+</code></pre>
+<h2 id="rw-on-known-paths"><a class="header" href="#rw-on-known-paths">R/W on known paths</a></h2>
+<h2 id="check-if-stuff-even-exists"><a class="header" href="#check-if-stuff-even-exists">Check if stuff even exists</a></h2>
+<ul>
+<li><code>os.path.exists(file_path_os)</code> (check if path exists)</li>
+<li><code>os.path.isfile(file_path_os)</code> check if thing is a file (not dir)</li>
+<li><code>Path.exists()</code>
+<ul>
+<li><code>Path.mkdir(parents=True)</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="parsing"><a class="header" href="#parsing">Parsing</a></h2>
+<ul>
+<li><code>os.path.split()</code></li>
+<li><code>path = pathlib.PurePath("path/goes/here.txt")</code> <a href="https://docs.python.org/3/library/pathlib.html#methods-and-properties">Pathlib</a> accessing individual components
+<ul>
+<li><code>PurePath.anchor</code> (root baisically)</li>
+<li><code>PurePath.name</code> -&gt; <code>filename.txt</code></li>
+<li><code>PurePath.suffix</code> -&gt; <code>.txt</code></li>
+<li><code>PurePath.stem</code> -&gt; <code>filename</code> without suffix</li>
+<li><code>PurePath.with_suffix(".csv")</code> to (replace) add file extension</li>
+</ul>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="shebang"><a href="#shebang" class="header">Shebang</a></h1>
+<p><code>#! /usr/bin/env python3</code></p>
+<p><code>chmod +x script.sh</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="ruby"><a class="header" href="#ruby">Ruby</a></h1>
+<p><em>written June 2025 on MacOS 15.5</em></p>
+<p><del>brew install ruby</del></p>
+<p>MacOS has version 2.6 ruby preinstalled (which is outdated, current&gt;3.0). There is nothing you can do about this.</p>
+<p>The brew installation won’t work, because the 2.6 binary takes priority over the 3.0, so nothing will work out of the box.</p>
+<p><a href="https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac">Stackoverflow thread on this issue</a></p>
+<p>Check paths with <code>type -a ruby</code> or <code>which -a ruby</code></p>
+<p>Check versions with <code>ruby --version</code>, <code>gem --version</code></p>
+<p>Which is why you need Ruby Environment Manager:</p>
+<h2 id="ruby-environment-manager"><a class="header" href="#ruby-environment-manager">Ruby Environment Manager</a></h2>
+<h3 id="rbenv"><a class="header" href="#rbenv">rbenv</a></h3>
+<p><code>brew install rbenv ruby-build</code></p>
+<p><code>rbenv install -l</code></p>
+<p><code>rbenv install &lt;version&gt;</code></p>
+<p>just follow <a href="https://stackoverflow.com/questions/39381360/how-do-i-install-ruby-gems-on-mac">Stackoverflow thread on this issue</a>, it’s to confusing and complicated to explain what is acutally going on.</p>
+<h2 id="rubygems"><a class="header" href="#rubygems">RubyGems</a></h2>
+<p><a href="https://rubygems.org/">RubyGems.org Website</a></p>
+<p>The <code>gem</code> package manager comes preinstalled with ruby.</p>
+<p><code>gem update --system</code> to update gem</p>
+<pre><code>ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.6.0 directory.
+</code></pre>
+<p>MacOS is defaulting to outdated 2.6 ruby. See above.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="profiling-zshrc"><a class="header" href="#profiling-zshrc">Profiling .zshrc</a></h1>
+<p>If your terminal takes a long time to show the first prompt, it is because sourcing your <code>.zshrc</code> is slow.</p>
+<p><code>.zshrc</code> is a shell script that runs every time you open a new terminal. It is a hidden file in the home folder: <code>~/.zshrc</code> It is used by package managers and other shell tools to configure themselves before hand. Consequently, you will see a lot of <code>conda</code>, <code>nvm</code>, etc. in there.</p>
+<p>Run <code>source</code> is the equivalent of import. So <code>source ~/.zshrc</code> will re-load your shell.</p>
+<p>Trivia: The “rc” stands for “RUNCOM” according to wikipedia <a href="https://en.wikipedia.org/wiki/Unix_shell#Early_shells">Wikipedia</a>. Other shells like bash also have <code>.bashrc</code> files.</p>
+<hr>
+<h2 id="how-to-profile"><a class="header" href="#how-to-profile">How to Profile</a></h2>
+<p>Time stamped echos:</p>
+<pre><code class="language-sh">echo "Start $(date +%s%N)ns" # nanoseconds, 9 places after the second
+# ... suspects go here ...
+echo "end   $(date +%s%N)ns"
+</code></pre>
+<p><code>time [utility]</code> is usefull for timing the execution time of a single function.
+<code>time sh test.sh</code> with a suspect line in test.sh will print the execution time.</p>
+<p>To print a nice table with breakdown of time consuming functions use (scroll to the top of the output):</p>
+<pre><code class="language-zsh">zmodload zsh/zprof
+# zshrc here
+zprof
+</code></pre>
+<p>Warning: zprof is wierd and actually adds up the number of calls if you run <code>source ~/.zshrc</code> again in the same terminal session.</p>
+<p>Comment out the thing that is taking up time, and see how fast the startup is. Then decide whether to remove it or speed it up or keep it.</p>
+<pre><code># source $ZSH/oh-my-zsh.sh # 90% of my time
+</code></pre>
+<h2 id="what-to-look-for"><a class="header" href="#what-to-look-for">What to look for</a></h2>
+<p><code>source</code> means a whole additional script is being run, which could have plenty of time consuming stuff hidden inside. Btw. <code>.</code> is an alias for <code>source</code> so if you see a <code>. "script.sh"</code>, make sure to go after it.</p>
+<p>Package managers. Whereever there is a package manager, there will be <code>source</code> and other time consuming stuff.</p>
+<ul>
+<li>Install lazy loading plugin from <a href="https://github.com/qoomon/zsh-lazyload">here.</a> It uses lazy loading (loads only once needed.)</li>
+<li><code>conda</code> initialization is infamously slow. <a href="https://www.reddit.com/r/zsh/comments/qmd25q/lazy_loading_conda/">See this reddit comment for a lazy loader</a></li>
+<li><code>nvm</code> is a common suspect. Google how to lazy load it as well.</li>
+</ul>
+<p>Terminal customizers, such as <code>oh-my-zsh</code>. They are the main consumers of loading time, and and supposed to be. Look into tweaking them or using a different one if they are to slow. Google possible solutions <a href="https://www.joshyin.cc/blog/speeding-up-zsh">here is one for oh-my-zsh</a>.</p>
+<h3 id="from-the-profiler-output"><a class="header" href="#from-the-profiler-output">From the Profiler output</a></h3>
+<p>Look at the top 10 lines of the zprof output.</p>
+<p><code>compdump</code> and <code>compinit</code> and <code>compaudit</code> are shell completions (when you press tab and it show you available commands). They are the the heaviest suspect. They run only once, and remove them if possible. I have found them being run multiple times on multiple occasions.</p>
+<ul>
+<li>Open the <code>.zshrc</code> file in a text editor and <code>Ctrl+F</code> for <code>compinit</code> and just the word <code>completions</code>. Even if <code>compinit</code> is not in the file, package managers often attach comments.</li>
+<li>Not all completions are guilty. For example <code>[ -s "/Users/me/.bun/_bun" ] &amp;&amp; source "/Users/me/.bun/_bun"</code> (bun’s completion) doesn’t call compinit and is very fast when measured with <code>time</code> or <code>echo "$(date +%s%N)"</code></li>
+</ul>
+<h3 id="what-not-to-look-for"><a class="header" href="#what-not-to-look-for">What Not to Look For</a></h3>
+<p><code>export</code> is fast. Unlike <code>source</code>, <code>export</code> doesn’t execute anything.</p>
+<p>Powerlevel10k is famously fast.</p>
+<h2 id="more-resources"><a class="header" href="#more-resources">More Resources</a></h2>
+<ul>
+<li>https://www.mikekasberg.com/blog/2025/05/29/optimizing-zsh-init-with-zprof.html</li>
+<li>https://github.com/romkatv/zsh-bench?tab=readme-ov-file#summary</li>
+<li>https://www.dribin.org/dave/blog/archives/2024/01/01/zsh-performance/</li>
+<li>https://kasad.com/blog/zsh-profiling/</li>
+<li>https://alextheobold.com/posts/profiling_zsh/</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="diagnosing"><a href="#diagnosing" class="header">Diagnosing</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="how-much-file-sizes-should-take-up"><a class="header" href="#how-much-file-sizes-should-take-up">How much file sizes should take up</a></h1>
+<p>Fonts:
+aggregated data:</p>
+<ul>
+<li>85kib</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="linux-network-diagnosing"><a class="header" href="#linux-network-diagnosing">Linux Network Diagnosing</a></h1>
+<p><code>iwconfig</code></p>
+<ul>
+<li><code>wlan0</code> is WiFi</li>
+<li><code>eth0</code> is ethernet (cable)</li>
+<li><code>lo</code> is localhost (I think)</li>
+</ul>
+<p><code>lspci</code></p>
+<p><code>lspci -nnk | grep -iA3 net</code> (shows wifi chipset)</p>
+<p><code>lsusb</code></p>
+<p><code>ifconfig</code></p>
+<p><code>ethtool</code> is deprecated (gives error), use <code>nmcli</code></p>
+<ul>
+<li><code>nmcli device wifi list</code></li>
+<li><code>nmcli device show</code></li>
+<li><code>nmcli device status</code></li>
+</ul>
+<p><code>inxi -Fxx</code> (general device information)</p>
+<p><code>speedtest</code> by Ookla (cli version, needs installation)</p>
+<p>Then start punching keywords into Google.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="vms"><a href="#vms" class="header">VMs</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="docker"><a class="header" href="#docker">Docker</a></h1>
+<pre><code class="language-zsh">docker build -t &lt;image_name&gt; .
+docker run --name &lt;container_name&gt; &lt;image_name&gt;
+</code></pre>
+<h2 id="tempalte"><a class="header" href="#tempalte">Tempalte</a></h2>
+<pre><code class="language-lang-dockerfile"># Stage 1: Build stage (optional - for multi-stage builds)
+FROM alpine
+# other common FROM sources (technically any image would work):
+# alpine, ubuntu, base, python:slim, https://hub.docker.com/search?badges=official
+
+WORKDIR /app  
+# docker RUN cd doesn't actually switch dirs, use WORKDIR instead
+
+# Copy source code
+COPY . .  
+# everything except .dockerignore
+
+RUN make
+
+# which ports to expose
+EXPOSE 3000
+# but then the ports need to be mapped.
+# docker run -p 3000:3000 myapp     # Manual mapping
+# docker run -P myapp  # automap if possible
+USER serverrunner
+# switch to non root user for security
+
+ENTRYPOINT ["echo", "Hello"]
+CMD ["echo", "Hello"]
+</code></pre>
+<p>Ignore file (necessary)</p>
+<pre><code># .dockerignore
+#! .gitignore
+# include gitignore
+# Dependencies (reinstalled inside container anyway)
+node_modules
+npm-debug.log
+
+# Environment files
+.env
+.env.local
+
+# Git
+.git
+.gitignore
+
+# Docker files
+Dockerfile
+.dockerignore
+
+# IDE files
+.vscode
+.idea
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Build outputs
+dist/
+build/
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="virtual-machines-on-apple-silicon"><a class="header" href="#virtual-machines-on-apple-silicon">Virtual Machines on Apple Silicon</a></h1>
+<p>https://github.com/mikeroyal/Apple-Silicon-Guide#Linux-Virtualization-on-Apple-Silicon</p>
+<p>https://www.reddit.com/r/debian/comments/11jkkrk/running_debian_on_apple_silicon/</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="test-files"><a class="header" href="#test-files">Test Files</a></h1>
+<p>List of test files in different formats:</p>
+<p>Related repositories:</p>
+<ul>
+<li><a href="https://media.xiph.org/">Xiph Media Library</a> (video)</li>
+<li><a href="https://freepd.com/">FreePD</a> (audio)</li>
+<li><a href="https://commons.wikimedia.org/">Wikimedia</a></li>
+</ul>
+<p>Images:</p>
+<ul>
+<li><a href="https://r0k.us/graphics/kodak/">Kodak color images</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Lenna">Lenna</a> (use discouraged due to backstory) <a href="https://mortenhannemose.github.io/lena/">here is an alternative</a></li>
+<li><a href="https://sipi.usc.edu/database/">Signal and Image Processing Database</a></li>
+<li>my test images
+<ul>
+<li><a href="assets/table_items.png">Items on Table</a></li>
+</ul>
+</li>
+</ul>
+<p>Audio:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Tom%27s_Diner">Tom’s Diner</a> was used for mp3 development, but is not public.</li>
+<li><a href="https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1300002">Bushwick Tarantella</a></li>
+</ul>
+<p>Text:</p>
+<ul>
+<li>Lorem Ipsum</li>
+<li>Moby Dick</li>
+<li><a href="https://github.com/minimaxir/big-list-of-naughty-strings">Big List of Naughty Strings</a></li>
+</ul>
+<p>Data:</p>
+<ul>
+<li>Datasaurus dozen</li>
+</ul>
+<p>3D:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Blender_(software)#Suzanne">Suzanne</a></li>
+<li><a href="https://graphics.stanford.edu/data/3Dscanrep/">Standford Bunny</a></li>
+</ul>
+<h3 id="sources"><a class="header" href="#sources">Sources:</a></h3>
+<ul>
+<li><a href="https://www.reddit.com/r/publicdomain/comments/16snpyy/where_can_i_find_copyrightfree_music_recordings/">Reddit post on Copyright Free Music</a></li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="scalable-vector-graphics"><a class="header" href="#scalable-vector-graphics">Scalable Vector Graphics</a></h1>
+<h2 id="tips-for-writing-svgs-by-hand"><a class="header" href="#tips-for-writing-svgs-by-hand">Tips for Writing SVGs by Hand</a></h2>
+<p>Editors:</p>
+<ul>
+<li>https://www.svgviewer.dev/</li>
+</ul>
+<p>When entering points for paths and shapes, use <code>stroke="red" fill="blue" opacity="0.5"</code> then switch to intended colors.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="404"><a class="header" href="#404">404</a></h1>
+<p>I probably changed the url sheme…</p>
+<p>Use the search at the top to find whatever it was.</p>
+<script>
+// macro written by claude code.
+(function () {
+  var query = window.location.pathname
+    .replace(/\.html$/, "")
+    .split("/").filter(Boolean).pop()
+    .replace(/[-_]+/g, " ");
+  if (!query) return;
+  var url = new URL(window.location.href);
+  if (!url.searchParams.has("search")) {
+    url.searchParams.set("search", query);
+    window.location.replace(url.toString());
+  }
+})();
+</script>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="browser-automation"><a href="#browser-automation" class="header">Browser Automation</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="playwright"><a class="header" href="#playwright">Playwright</a></h1>
+<p><a href="https://playwright.dev/">Playwright Website</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="puppeteer"><a class="header" href="#puppeteer">Puppeteer</a></h1>
+<p><a href="https://pptr.dev/">Puppeteer Website</a></p>
+<h2 id="doing-part-of-the-work-manually"><a class="header" href="#doing-part-of-the-work-manually">Doing part of the work Manually</a></h2>
+<p><a href="https://www.reddit.com/r/node/comments/d0uggx/how_to_use_puppeteer_in_conjunction_with_manual/">How to use Puppeteer in conjunction with manual, human activity? on r/node</a></p>
+<pre><code>/* automated stuff */
+
+// do your manual work here
+await page.waitForElement('.trigger-element',{ timeout: 100_000 })) // a selector that only appears after your manual work is done
+
+/* continue automated stuff */
+</code></pre>
+<p>You can trigger continuation with.</p>
+<pre><code>let element = document.createElement("div");
+element.className = "trigger-element";
+element.style.display = "none";
+document.body.appendChild(element);
+</code></pre>
+<pre><code>((s)=&gt;{
+let element = document.createElement("div");
+element.className = s;
+element.style.display = "none";
+document.body.appendChild(element);
+})("trigger-element"); // change name here
+</code></pre>
+<hr>
+<p>Apparently I wrote notes twice. TODO merge.</p>
+<p><a href="https://pptr.dev/">Official Website</a></p>
+<p>Alternatives:</p>
+<ul>
+<li><a href="https://phantomjs.org/">PhantomJS headless browser</a></li>
+<li><a href="https://slimerjs.org/">SlimerJS for Firefox</a></li>
+</ul>
+<p>Library for browser manipulation. Supports both Firefox and Chrome.</p>
+<pre><code class="language-js">import puppeteer from 'puppeteer';
+
+(async () =&gt; {
+  // Launch the browser and open a new blank page
+  const browser = await puppeteer.launch();
+  const page = await browser.newPage();
+
+  // Navigate the page to a URL
+  await page.goto('https://developer.chrome.com/');
+
+  // Set screen size
+  await page.setViewport({width: 1080, height: 1024});
+
+  // Type into search box
+  await page.type('.devsite-search-field', 'automate beyond recorder');
+
+  // Wait and click on first result
+  const searchResultSelector = '.devsite-result-item-link';
+  await page.waitForSelector(searchResultSelector);
+  await page.click(searchResultSelector);
+
+  // Locate the full title with a unique string
+  const textSelector = await page.waitForSelector(
+    'text/Customize and automate',
+  );
+  const fullTitle = await textSelector?.evaluate(el =&gt; el.textContent);
+
+  // Print the full title
+  console.log('The title of this blog post is "%s".', fullTitle);
+
+  await browser.close();
+})();
+</code></pre>
+<pre><code class="language-js">const browser = await puppeteer.launch({
+  browser: 'firefox',
+});
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="c-template-image-processing-library"><a class="header" href="#c-template-image-processing-library">C++ Template Image Processing Library</a></h1>
+<p><a href="https://cimg.eu/index.html">cimg.eu website</a></p>
+<p><code>brew install xquartz</code></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="clojure"><a class="header" href="#clojure">Clojure</a></h1>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="clojure-basics"><a href="#clojure-basics" class="header">Clojure Basics</a></h1>
+<p>membership checks:</p>
+<pre><code>(some #{3} (vector 1 2 3)) ;
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="excel-and-spreadsheet-shoftware"><a class="header" href="#excel-and-spreadsheet-shoftware">Excel and Spreadsheet Shoftware</a></h1>
+<p>Cheat sheet for Excel and every other spreadsheet software out there:</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="fun-with-terminals"><a href="#fun-with-terminals" class="header">Fun with Terminals</a></h1>
+<h2 id="getting-terminal-size"><a class="header" href="#getting-terminal-size">Getting Terminal Size</a></h2>
+<div class="table-wrapper">
+<table>
+<thead>
+<tr><th>Language</th><th>script</th></tr>
+</thead>
+<tbody>
+<tr><td>Python</td><td>os.get_terminal_size(fd=STDOUT_FILENO, /)</td></tr>
+</tbody>
+</table>
+</div>
+<h2 id="getting-computer-specs"><a class="header" href="#getting-computer-specs">getting Computer specs</a></h2>
+<p><a href="https://github.com/fastfetch-cli/fastfetch"><code>fastfetch</code></a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="embarcadero-c-compiler"><a class="header" href="#embarcadero-c-compiler">Embarcadero C++ Compiler</a></h1>
+<p><a href="https://www.embarcadero.com/products/cbuilder">Embarcadero</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="paperbak-by-ollydbg"><a class="header" href="#paperbak-by-ollydbg">Paperbak by Ollydbg</a></h1>
+<p><a href="https://ollydbg.de/Paperbak/">Paperbak</a> for backing up data on paper.</p>
+<p>Evidently doesn’t work unless the printer specs are accessible. No offline exports, must have an online printer.</p>
+<h2 id="compiling-2"><a class="header" href="#compiling-2">Compiling</a></h2>
+<p>idk how to compile</p>
+<h2 id="wine"><a class="header" href="#wine">Wine</a></h2>
+<p>On systems other than windows, Wine to the rescue.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="qr-backup"><a class="header" href="#qr-backup">QR Backup</a></h1>
+<p>https://github.com/za3k/qr-backup/</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<p>Boilerplate Template:</p>
+<pre><code class="language-zig">const std = @import("std");
+
+pub fn hello() void {
+    std.debug.print("Hello", .{});
+}
+
+pub fn main() void {
+    hello();
+}
+</code></pre>
+<h1 id="existing-resources"><a class="header" href="#existing-resources">Existing Resources</a></h1>
+<p>The zig docs are horrible.</p>
+<p>All existing Zig resources end here: <a href="https://ziglang.org/learn/">Zig Learn list</a></p>
+<p>Written 25th Jan 2026, Zig version 0.15.2</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="allocators"><a href="#allocators" class="header">Allocators</a></h1>
+<p><a href="https://zig.guide/standard-library/allocators">zig.guide on Allocators</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="c-interop"><a href="#c-interop" class="header">C Interop</a></h1>
+<pre><code class="language-zig">const c = @cImport({
+    @cInclude("stdio.h");
+});
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="compiletime"><a href="#compiletime" class="header">CompileTime</a></h1>
+<p>Zig is strict, and that’s its point. I recommend just agreeing to its demands instead of fighting them.</p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="lists-and-arrays"><a class="header" href="#lists-and-arrays">Lists and Arrays</a></h1>
+<p><a href="https://zig.guide/language-basics/arrays">Zig Guide</a></p>
+<pre><code class="language-zig">const a = [5]u8{ 'h', 'e', 'l', 'l', 'o' };
+const b = [_]u8{ 'w', 'o', 'r', 'l', 'd' };
+std.debug.print("{any}", .{a});
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="math"><a href="#math" class="header">Math</a></h1>
+<p>Math <a href="https://ziglang.org/documentation/0.15.2/std/#std.math">standard library docs</a></p>
+<div style="break-before: page; page-break-before: always;"></div>
+<h1 id="zig-file-io"><a class="header" href="#zig-file-io">Zig File IO</a></h1>
+<pre><code class="language-zig">const std = @import("std");
+pub fn main() !void {
+    const cwd = std.fs.cwd();
+    const file = try cwd.createFile("example.txt", .{});
+    defer file.close();
+    const content = "Hello, Zig File I/O!\n";
+    try file.writeAll(content);
+    std.debug.print("File written successfully.\n", .{});
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+        <template id=fa-eye><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M288 32c-80.8 0-145.5 36.8-192.6 80.6C48.6 156 17.3 208 2.5 243.7c-3.3 7.9-3.3 16.7 0 24.6C17.3 304 48.6 356 95.4 399.4C142.5 443.2 207.2 480 288 480s145.5-36.8 192.6-80.6c46.8-43.5 78.1-95.4 93-131.1c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C433.5 68.8 368.8 32 288 32zM432 256c0 79.5-64.5 144-144 144s-144-64.5-144-144s64.5-144 144-144s144 64.5 144 144zM288 192c0 35.3-28.7 64-64 64c-11.5 0-22.3-3-31.6-8.4c-.2 2.8-.4 5.5-.4 8.4c0 53 43 96 96 96s96-43 96-96s-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6z"/></svg></span></template>
+        <template id=fa-eye-slash><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M38.8 5.1C28.4-3.1 13.3-1.2 5.1 9.2S-1.2 34.7 9.2 42.9l592 464c10.4 8.2 25.5 6.3 33.7-4.1s6.3-25.5-4.1-33.7L525.6 386.7c39.6-40.6 66.4-86.1 79.9-118.4c3.3-7.9 3.3-16.7 0-24.6c-14.9-35.7-46.2-87.7-93-131.1C465.5 68.8 400.8 32 320 32c-68.2 0-125 26.3-169.3 60.8L38.8 5.1zM223.1 149.5C248.6 126.2 282.7 112 320 112c79.5 0 144 64.5 144 144c0 24.9-6.3 48.3-17.4 68.7L408 294.5c5.2-11.8 8-24.8 8-38.5c0-53-43-96-96-96c-2.8 0-5.6 .1-8.4 .4c5.3 9.3 8.4 20.1 8.4 31.6c0 10.2-2.4 19.8-6.6 28.3l-90.3-70.8zm223.1 298L373 389.9c-16.4 6.5-34.3 10.1-53 10.1c-79.5 0-144-64.5-144-144c0-6.9 .5-13.6 1.4-20.2L83.1 161.5C60.3 191.2 44 220.8 34.5 243.7c-3.3 7.9-3.3 16.7 0 24.6c14.9 35.7 46.2 87.7 93 131.1C174.5 443.2 239.2 480 320 480c47.8 0 89.9-12.9 126.2-32.5z"/></svg></span></template>
+        <template id=fa-copy><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M502.6 70.63l-61.25-61.25C435.4 3.371 427.2 0 418.7 0H255.1c-35.35 0-64 28.66-64 64l.0195 256C192 355.4 220.7 384 256 384h192c35.2 0 64-28.8 64-64V93.25C512 84.77 508.6 76.63 502.6 70.63zM464 320c0 8.836-7.164 16-16 16H255.1c-8.838 0-16-7.164-16-16L239.1 64.13c0-8.836 7.164-16 16-16h128L384 96c0 17.67 14.33 32 32 32h47.1V320zM272 448c0 8.836-7.164 16-16 16H63.1c-8.838 0-16-7.164-16-16L47.98 192.1c0-8.836 7.164-16 16-16H160V128H63.99c-35.35 0-64 28.65-64 64l.0098 256C.002 483.3 28.66 512 64 512h192c35.2 0 64-28.8 64-64v-32h-47.1L272 448z"/></svg></span></template>
+        <template id=fa-play><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80V432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z"/></svg></span></template>
+        <template id=fa-clock-rotate-left><span class=fa-svg><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc. --><path d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9V168c0 13.3 10.7 24 24 24H134.1c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24V256c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65V152c0-13.3-10.7-24-24-24z"/></svg></span></template>
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr-ef4e11c1.min.js"></script>
+        <script src="mark-09e88c2c.min.js"></script>
+        <script src="searcher-09f2665d.js"></script>
+
+        <script src="clipboard-1626706a.min.js"></script>
+        <script src="highlight-abc7f01d.js"></script>
+        <script src="book-c22b7243.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+
+    </div>
+    </body>
+</html>
