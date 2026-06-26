@@ -93,6 +93,7 @@
   - [linux network settings](./diagnosing/linux-network.md)
 - [VMs](./vm/index.md)
   - [Docker](./vm/docker.md)
+    - [TinyTex](./vm/docker/tinytex.md)
   - [VMs on MacOS](./vm/vms-on-macos.md)
 - [Test Files](./test_files.md)
 - [SVG](./svg.md)
