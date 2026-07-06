@@ -8,9 +8,18 @@
 
 
 ```py
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, send_from_directory
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder="./static")
+
+#static host
+@app.route("/", defaults={"path": ""})
+@app.route("/<path:path>")
+def serve(path):
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    return send_from_directory(app.static_folder, "index.html")
 
 @app.route('/hello/<path:subpath>', methods=['GET', 'POST'])
 def hello_world(subpath):
@@ -22,8 +31,11 @@ def hello(name=None):
     request_data = request.get_json(silent=True)
     return render_template('hello.html', person=name)
 
-@app.rout('/json')
+@app.route('/json')
 def json():
     dict = {"a": 0}
     return jsonify(dict)
+
+if __name__ == "__main__":
+    app.run()
 ```
