@@ -37,3 +37,22 @@ hydra:
   run:  
     dir: .
 ```
+
+## Custom Macros
+
+```py
+import subprocess
+
+def get_git_commit() -> str:
+    try:
+        return subprocess.check_output(["git", "rev-parse", "HEAD"]).decode("utf-8").strip()
+    except subprocess.CalledProcessError:
+        return "unknown_commit"
+```
+
+then 
+
+```py
+from omegaconf import OmegaConf, DictConfig
+    OmegaConf.register_new_resolver("git_commit", get_git_commit)
+```

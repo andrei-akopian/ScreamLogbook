@@ -5,3 +5,7 @@ OpenPGP is a standard. GnuPG is the most popular implementation, but there are o
 ## Keyservers 
 
 Keyservers are synchronized via the SKS Keyserver Network.
+
+## GPG usage
+
+`gpg --clearsign message.txt`

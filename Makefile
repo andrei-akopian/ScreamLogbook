@@ -4,3 +4,6 @@ default:
 	python3 link_checker.py
 	rg "TODO" src
 	mdbook build
+
+serve:
+	mdbook serve
