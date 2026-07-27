@@ -2,6 +2,8 @@
 
 ### AIM
 
+Note: AIM ui is almost completely unusable.
+
 [aim (github)](https://github.com/aimhubio/aim) and [docs](https://aimstack.readthedocs.io/en/latest/)
 
 `pip3 install aim`

@@ -1,4 +1,0 @@
-membership checks:
-```
-(some #{3} (vector 1 2 3)) ;
-```

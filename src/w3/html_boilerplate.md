@@ -11,7 +11,7 @@ Sources:
         <title>Template Title</title>
         <meta name="viewport" content="width=device-width,initial-scale=1" />
         <meta name="description" content="Description Goes Here" />
-        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" /><link rel="icon" type="image/svg" href="/images/favicon.svg">
     </head>
     <body>
         <h1>Template</h1>
