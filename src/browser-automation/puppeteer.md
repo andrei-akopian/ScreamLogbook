@@ -6,7 +6,7 @@
 
 [How to use Puppeteer in conjunction with manual, human activity? on r/node](https://www.reddit.com/r/node/comments/d0uggx/how_to_use_puppeteer_in_conjunction_with_manual/)
 
-```
+```js
 /* automated stuff */
 
 // do your manual work here
@@ -17,14 +17,14 @@ await page.waitForElement('.trigger-element',{ timeout: 100_000 })) // a selecto
 
 You can trigger continuation with.
 
-```
+```js
 let element = document.createElement("div");
 element.className = "trigger-element";
 element.style.display = "none";
 document.body.appendChild(element);
 ```
 
-```
+```js
 ((s)=>{
 let element = document.createElement("div");
 element.className = s;
