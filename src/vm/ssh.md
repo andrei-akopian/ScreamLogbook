@@ -2,7 +2,9 @@
 
 ## Key Generation
 
-`ssh-keygen -t <type>` eg. `ssh-keygen -t ed25519`
+`ssh-keygen -t <type>`
+
+eg. `ssh-keygen -t ed25519`
 
 ## Port Forwarding
 
