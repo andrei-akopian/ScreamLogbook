@@ -1,7 +1,8 @@
-link to this repo: https://andrei-akopian.github.io/ScreamLogbook/ 
-
-# Logbook of my Screams
+# [Logbook of my Screams](https://andrei-akopian.github.io/ScreamLogbook/)
 and lesser nightmares of programming.
+
+Link to website: https://andrei-akopian.github.io/ScreamLogbook/
+Link to this repo: https://github.com/andrei-akopian/ScreamLogbook
 
 `mdbook serve`
 
