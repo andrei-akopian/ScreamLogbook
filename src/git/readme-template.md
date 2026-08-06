@@ -22,6 +22,8 @@ Similar projects: [Awesome Readme](https://github.com/matiassingers/awesome-read
 
 ## Installation Instructions
 
+### Uninstall Instructions
+
 ## Project Structure
 
 ## About

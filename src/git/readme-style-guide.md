@@ -4,6 +4,7 @@
 
 - [link to repo somewhere at the top](https://github.com/andrei-akopian/ScreamLogbook). Finding the source / remote origin is hard in cloned repositories.
 - links to related projects, preferably even before your own demo.
+- Install and Uninstall sections.
 
 Related:
 - [Art of README](https://github.com/hackergrrl/art-of-readme)
