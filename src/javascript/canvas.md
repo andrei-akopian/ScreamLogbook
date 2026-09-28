@@ -1,5 +1,8 @@
 # Canvas API
 
+```html
+<canvas id="canvas" height="150" width="300"></canvas>
+```
 
 ```js
 const canvas = document.getElementById("canvas");
