@@ -7,12 +7,14 @@
 #set text(
   font: "New Computer Modern"
 )
-#line(width: 60%)
+#line(length: 60%)
 
 #link("<url>")[<title>]
 
 // footer
-#set page(footer: context [
+#set page(
+  head: "header text"
+  footer: context [
   draft of whatever
   #h(1fr)
   #counter(page).display(
