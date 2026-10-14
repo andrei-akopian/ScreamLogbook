@@ -43,3 +43,9 @@ ERROR:  While executing gem ... (Gem::FilePermissionError)
 ```
 
 MacOS is defaulting to outdated 2.6 ruby. See above.
+
+### Gems
+```bash
+gem build myproject.gemspec
+gem install ./myproject.gem
+```
