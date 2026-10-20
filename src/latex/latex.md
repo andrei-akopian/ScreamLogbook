@@ -29,3 +29,36 @@ Symbol lookup:
 
 ## Resources
 - [Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf)
+
+## Tables
+```tex
+\begin{center}
+\begin{tabular}{ c c c }
+ cell1 & cell2 & cell3 \\ 
+ cell4 & cell5 & cell6 \\  
+ cell7 & cell8 & cell9    
+\end{tabular}
+\end{center}
+```
+
+## Code
+
+```tex
+\def\code#1{\texttt{#1}} % then use \code{...}
+% see https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
+```
+
+## Images
+
+### Tikz
+
+```tex
+\begin{figure}[htbp]
+    \centering
+    \resizebox{0.65\textwidth}{!}{
+        \input{myimage} % omit .tex
+    }
+    \caption{my figure name}
+    \label{f:figurename}
+\end{figure}
+```
