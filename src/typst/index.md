@@ -13,7 +13,7 @@
 
 // footer
 #set page(
-  head: "header text"
+  header: "header text"
   footer: context [
   draft of whatever
   #h(1fr)
