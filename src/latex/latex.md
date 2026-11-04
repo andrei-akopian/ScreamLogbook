@@ -50,7 +50,22 @@ Symbol lookup:
 
 ## Images
 
+### SVG
+
+https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
+
+```latex
+\usepackage{svg}
+\begin{document}
+\includesvg{some_svg_file}
+\end{document}
+```
+
 ### Tikz
+
+```tex
+\usepackage{tikz}
+```
 
 ```tex
 \begin{figure}[htbp]
