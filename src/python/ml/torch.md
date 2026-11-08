@@ -110,3 +110,10 @@ for epoch in range(5):
     current_lr = scheduler.get_last_lr()[0]
     print(f"Epoch {epoch+1} complete. Next Learning Rate: {current_lr:.6f}")
 ```
+
+## Random Data Generation
+[Torch Rand Module](https://docs.pytorch.org/docs/2.15/generated/torch.rand.html)
+
+```python
+torch.rand(n,m) # generate an n by m matrix filled with [0,1) values.
+```
