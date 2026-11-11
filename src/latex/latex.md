@@ -27,6 +27,13 @@ Symbol lookup:
 
 ### Basic Math
 
+```tex
+\begin{cases}
+    1 & \text{if} a=b \\
+    0 & \text{if} a\not=b
+\end{cases}
+```
+
 ## Resources
 - [Not So Short Introduction to LaTeX](https://tobi.oetiker.ch/lshort/lshort.pdf)
 
@@ -46,6 +53,26 @@ Symbol lookup:
 ```tex
 \def\code#1{\texttt{#1}} % then use \code{...}
 % see https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
+```
+
+### Algorithms
+
+[Algorithms](https://www.overleaf.com/learn/latex/Algorithms)
+
+```latex
+\usepackage{algpseudocode}
+\begin{algorithmic}[1] % the [1] (or [n]) numbers every nth line
+\Function{\textsc{MyFunction}}{}
+\State $i \gets 10$
+\If{$i\geq 5$} \Comment{Compare $i$ and $5$} 
+    \State $i \gets i-1$
+\Elsif{$i > 8$}
+    \If{$i\leq 3$}
+        \State $i \gets i+2$
+    \EndIf
+\EndIf
+\EndFunction
+\end{algorithmic}
 ```
 
 ## Images
