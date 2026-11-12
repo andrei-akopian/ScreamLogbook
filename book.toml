@@ -7,3 +7,4 @@ title = "Scream Logbook"
 [output.html]
 git-repository-url = "https://github.com/andrei-akopian/ScreamLogbook"
 site-url = "/ScreamLogbook/"
+mathjax-support = true

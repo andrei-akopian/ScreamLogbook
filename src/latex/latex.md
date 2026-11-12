@@ -77,6 +77,17 @@ Symbol lookup:
 
 ## Images
 
+### PNG
+
+```latex
+\begin{figure}[hp]
+    \centering
+    \includegraphics[width=0.5\linewidth]{figure.png}
+    \caption{Caption}
+    \label{fig:figurename}
+\end{figure}
+```
+
 ### SVG
 
 https://tex.stackexchange.com/questions/2099/how-to-include-svg-diagrams-in-latex
