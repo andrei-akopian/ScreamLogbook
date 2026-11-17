@@ -2,7 +2,7 @@
 
 [Common LISP language specification](https://www.lispworks.com/documentation/HyperSpec/Front/Contents.htm) (though [CL-Community-Spec](https://cl-community-spec.github.io/pages/index.html) has better rendering).
 
-## Compilers
+## Interpreters & Compilers
 
 [Steel Bank Common Lisp](https://www.sbcl.org/)
 
@@ -15,6 +15,29 @@ alias sbcl="rlwrap sbcl"
 ```
 
 Note: on MacOs install with brew. Otherwise it throws some kind of allocation memory issues, and asks for permissions.
+
+Common Lisp doesn't compile. Best it can do is
+
+```lisp
+(compile-file "myfile.lisp")
+```
+
+to create a "fast loading binary" `myfile.fasl`
+
+```lisp
+(load "myfile.fasl")
+```
+
+"Normal" compilation is 
+
+```bash
+sbcl --noinform \
+     --load myfile.lisp \
+     --eval "(sb-ext:save-lisp-and-die \"mybinary\" :toplevel #'main :executable t)"
+./mybinary
+```
+
+which basically freezes a ~40MiB SBCL runtime state (not exactly a normal executable.)
 
 ## Resources
 
