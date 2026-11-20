@@ -31,6 +31,15 @@ Arguments into `$f12-f14`, output in `$f0-$f2` by convention.
 
 Use `jal <label>` to jump to function and `jr $ra` to return.
 
+standard function call block
+```
+add $sp, $sp, -4
+sw $ra, 0($sp)
+jal <myfunction>
+lw $ra, 0($sp)
+add $sp, $sp, 4
+```
+
 ## Writing to Preallocated space
 
 `la` to link address of memory location
