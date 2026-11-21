@@ -62,3 +62,12 @@ main:
     add $t3, $t0, $t1  # Address of array[5]
     sb $t2, 0($t3)     # array[5] = 42
 ```
+
+## Macros
+
+```
+.macro name(%param1, %param2)
+    # instructions using %param1, %param2
+    # don't use labels
+.end_macro
+```
