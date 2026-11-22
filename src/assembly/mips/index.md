@@ -11,6 +11,18 @@ Reference: [MIPS Reference Data](https://raw.githubusercontent.com/rswinkle/mips
   syscall
 ```
 
+## Debugging
+
+Newline macro
+
+```
+.macro printnewline()
+  li $v0 11 # print character
+  li $a0 '\n'
+  syscall
+.end_macro
+```
+
 ## Registers
 
 Most of this stuff is more convention than hard rules.
